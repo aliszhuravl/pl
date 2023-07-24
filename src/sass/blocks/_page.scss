@@ -1,0 +1,145 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  position: relative;
+  min-width: 320px;
+  width: 100%;
+  min-height: 100%;
+  background-color: transparent;
+  background-image: url('../img/fone.png');
+  background-repeat: repeat;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.page__inner {
+  @extend .layout-inner;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: transparent;
+}
+
+.page__item {
+  @extend .layout-padding;
+  margin-bottom: 90px;
+  background-color: transparent;
+}
+
+.cases_block__item {
+  position: relative;
+    &:after {
+      position: absolute;
+      content: '';
+      height: 3px;
+      width: 0;
+      bottom: 0;
+      left: 0;
+      background-color: hotpink;
+      transition: all 0.3s;
+    }
+  .right {
+    position: relative;
+      .case_img_back {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        transition: all 0.3s;
+      }
+  }
+  .case_img_cover {
+    visibility: visible;
+  }
+  .case_img_back {
+    visibility: hidden;
+  }
+  &:hover {
+    border-color:  $color-violet;
+    &:after {
+      width: 100%;
+      transition: all 0.3s;
+    }
+    .right {
+      position: relative;
+      .case_img_back {
+        position: absolute;
+        visibility: visible;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        transition: all 0.3s;
+      }
+    }
+  }
+}
+
+.hero_contacts {
+  min-height: inherit !important;
+}
+
+
+.serv_block {
+  .cases_block__item {
+    align-items: flex-end;
+    flex-direction: row;
+    .right {
+      width: auto;
+      img {
+        transition: all 0.2s;
+        transform: rotate(0deg);
+        width: 40px;
+      }
+    }
+    .left {
+      max-width: 100%;
+      width: 90%;
+      margin-left: 0;
+      padding-left: 40px;
+      .case_info {
+        display: flex;
+        flex-direction: row;
+          .case_name {
+            color: #363636;
+            width: 40%;
+            margin-bottom: 0;
+            margin-right: 60px;
+            text-transform: none;
+            font-size: calc(24px + (30 - 24) * ((100vw - 1199px) / (1920 - 1199)));
+            line-height: calc(29px + (35 - 29) * ((100vw - 1199px) / (1920 - 1199)));
+            font-family: $font-family_deco;
+          }
+        .case_text {
+          width: 40%;
+          margin-bottom: 0;
+          color: #363636;
+        }
+      }
+    }
+    &:first-child {
+      border-top: 1px solid rgba(0, 0, 0, .2);
+    }
+    &:hover {
+      .right {
+        img {
+          transition: all 0.2s;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}
+
+.values_container__item_point {
+  img {
+    max-height: 45px;
+
+  }
+}
