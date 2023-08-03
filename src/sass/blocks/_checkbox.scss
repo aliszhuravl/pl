@@ -52,11 +52,11 @@
 //стили отмеченного чекбокса
 .form__checkbox > input:checked ~ .form__checkbox_indicator {
   background: transparent;
-  border-color: $color-violet;
+  border-color: $color-fat-toad;
 }
 
 .form__checkbox > input:checked ~ .form__checkbox_text {
-  color: $color-violet;
+  color: $color-fat-toad;
 }
 
 //стили неотмеченного чекбокса
@@ -67,7 +67,7 @@
 
 //стиль при получении фокуса
 .form__checkbox > input:focus ~ .form__checkbox_indicator {
-  border-color: $color-violet;
+  color: $color-fat-toad;
 
 
 }

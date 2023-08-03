@@ -6,7 +6,7 @@
   color: #363636;
 
   &:hover {
-    color: hotpink;
+    color: $color-fat-toad;
   }
 
   &:focus,
@@ -24,9 +24,6 @@
 
 
 .link_violet {
-  color: hotpink;
+  color: $color-toad;
   text-decoration: none;
-    &:hover {
-
-    }
 }

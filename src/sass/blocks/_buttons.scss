@@ -31,11 +31,11 @@
   
   &:hover,
   &:focus {
-    box-shadow: 3px 5px 2px #FFADC6;
+    box-shadow: 3px 5px 2px $color-toad;
   }
   
   &:active {
-    box-shadow: 3px 5px 2px #FFADC6;
+    box-shadow: 3px 5px 2px $color-toad;
   }
 }
 

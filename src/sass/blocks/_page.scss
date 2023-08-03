@@ -41,7 +41,7 @@
       width: 0;
       bottom: 0;
       left: 0;
-      background-color: hotpink;
+      background-color: $color-toad;
       transition: all 0.3s;
     }
   .right {
@@ -62,7 +62,7 @@
     visibility: hidden;
   }
   &:hover {
-    border-color:  $color-violet;
+    border-color:  $color-toad;
     &:after {
       width: 100%;
       transition: all 0.3s;

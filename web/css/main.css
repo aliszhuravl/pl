@@ -961,7 +961,7 @@ h3 {
 	width: 100%;
 	height: 0;
 	content: '';
-	background-color: hotpink;
+	background-color: #93f8bb;
 }
 
 .header__inner .menu .menu_horizontal .list li .link_menu {
@@ -988,7 +988,7 @@ h3 {
 }
 
 .header__inner .menu .link_bold:hover {
-	color: hotpink;
+	color: #40c264;
 }
 
 .nav__list {
@@ -1062,7 +1062,7 @@ h3 {
 	height: 3px;
 	content: '';
 	transition: all .3s;
-	background-color: hotpink;
+	background-color: #93f8bb;
 }
 
 .cases_block__item .right {
@@ -1087,7 +1087,7 @@ h3 {
 }
 
 .cases_block__item:hover {
-	border-color: hotpink;
+	border-color: #93f8bb;
 }
 
 .cases_block__item:hover:after {
@@ -1199,7 +1199,7 @@ h3 {
 }
 
 .footer__inner .left .list li a:hover {
-	color: hotpink;
+	color: #93f8bb;
 }
 
 .footer__inner .right .social {
@@ -1217,7 +1217,7 @@ h3 {
 
 .footer__inner .right .social a.link:hover,
 .footer__inner .right .social a.nav__link:hover {
-	color: #ffadc6;
+	color: #93f8bb;
 }
 
 .footer__inner .right .social a.link:last-child,
@@ -1273,7 +1273,7 @@ h3 {
 }
 
 .form__item:focus {
-	border-color: hotpink;
+	border-color: #363636;
 	outline: 0;
 }
 
@@ -1329,7 +1329,7 @@ h3 {
 }
 
 .form__textarea:focus {
-	border-color: hotpink;
+	border-color: #363636;
 	outline: 0;
 }
 
@@ -1400,11 +1400,11 @@ h3 {
 
 .btn:hover,
 .btn:focus {
-	box-shadow: 3px 5px 2px #ffadc6;
+	box-shadow: 3px 5px 2px #93f8bb;
 }
 
 .btn:active {
-	box-shadow: 3px 5px 2px #ffadc6;
+	box-shadow: 3px 5px 2px #93f8bb;
 }
 
 .theme-button {
@@ -1508,16 +1508,16 @@ h3 {
 }
 
 .form__checkbox > input:checked ~ .form__checkbox_indicator {
-	border-color: hotpink;
+	border-color: #40c264;
 	background: transparent;
 }
 
 .form__checkbox > input:checked ~ .form__checkbox_text {
-	color: hotpink;
+	color: #40c264;
 }
 
 .form__checkbox > input:focus ~ .form__checkbox_indicator {
-	border-color: hotpink;
+	color: #40c264;
 }
 
 .form__checkbox > input:disabled ~ .form__checkbox_indicator {
@@ -1688,7 +1688,7 @@ li.animated-button.thar-three:before {
 .preloader .load_line__inner {
 	width: 1px;
 	height: 100%;
-	background-color: #ffadc6;
+	background-color: #93f8bb;
 }
 
 .active_load {
@@ -1753,7 +1753,7 @@ li.animated-button.thar-three:before {
 
 .link:hover,
 .nav__link:hover {
-	color: hotpink;
+	color: #40c264;
 }
 
 .link:focus,
@@ -1772,7 +1772,7 @@ li.animated-button.thar-three:before {
 
 .link_violet {
 	text-decoration: none;
-	color: hotpink;
+	color: #93f8bb;
 }
 
 .hero_block {
@@ -2497,7 +2497,7 @@ li.animated-button.thar-three:before {
 
 .services_block__item:hover .ital_subname {
 	text-decoration: none;
-	color: hotpink;
+	color: #40c264;
 }
 
 .services_block__item:hover .service_img img {
@@ -2577,7 +2577,7 @@ li.animated-button.thar-three:before {
 .change_theme .btn {
 	color: #363636;
 	background-color: #f3f3f3;
-	box-shadow: 3px 5px 2px #ffadc6;
+	box-shadow: 3px 5px 2px #93f8bb;
 }
 
 .change_theme h2 {
@@ -2609,11 +2609,11 @@ li.animated-button.thar-three:before {
 }
 
 .change_theme .header__inner .menu .logo svg path:last-child {
-	fill: #ffadc6;
+	fill: #93f8bb;
 }
 
 .change_theme .header__inner .menu_horizontal .list li::after {
-	background-color: #ffadc6;
+	background-color: #93f8bb;
 }
 
 .change_theme .header__inner .menu_horizontal .list li .link_menu {
@@ -2621,7 +2621,7 @@ li.animated-button.thar-three:before {
 }
 
 .change_theme .header__inner .contact .link_bold {
-	color: #ffadc6;
+	color: #93f8bb;
 }
 
 .change_theme .header__inner .contact .link_bold:hover {
@@ -2641,7 +2641,7 @@ li.animated-button.thar-three:before {
 }
 
 .change_theme .cases_block__item:hover::after {
-	background-color: #ffadc6;
+	background-color: #93f8bb;
 }
 
 .change_theme .cases_block__item .left .case_name {
@@ -2697,16 +2697,16 @@ li.animated-button.thar-three:before {
 }
 
 .change_theme .form__checkbox > input:checked ~ .form__checkbox_indicator {
-	border-color: #ffadc6;
+	border-color: #93f8bb;
 	background: transparent;
 }
 
 .change_theme .form__checkbox > input:checked ~ .form__checkbox_text {
-	color: #ffadc6;
+	color: #93f8bb;
 }
 
 .change_theme .link_violet {
-	color: #ffadc6;
+	color: #93f8bb;
 }
 
 .change_theme .footer {
@@ -2723,6 +2723,10 @@ li.animated-button.thar-three:before {
 
 .change_theme .serv_block .cases_block__item .left .case_info .case_text {
 	color: rgba(255, 255, 255, .7);
+}
+
+.change_theme .form_left a {
+	color: #93f8bb;
 }
 
 .burger {
@@ -3996,7 +4000,7 @@ li.animated-button.thar-three:before {
 	font-size: 18px;
 	margin-right: 0;
 	margin-bottom: 0;
-	color: hotpink;
+	color: #40c264;
 }
 
 .serv_block .cases_block__item .right img {

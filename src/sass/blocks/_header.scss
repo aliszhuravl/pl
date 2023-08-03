@@ -39,7 +39,7 @@
                   width: 100%;
                   position: absolute;
                   content: '';
-                  background-color: hotpink;
+                  background-color: $color-toad;
                   top: -15px;
                   left: 0;
                   height: 0;
@@ -68,7 +68,7 @@
           font-size: calc(13px + (20 - 13) * ((100vw - 375px) / (1920 - 375)));
           line-height: calc(13px + (20 - 13) * ((100vw - 375px) / (1920 - 375)));
             &:hover {
-              color: hotpink;
+              color: $color-fat-toad;
             }
         }
     }

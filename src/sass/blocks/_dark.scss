@@ -38,7 +38,7 @@
   .btn {
     background-color: #F3F3F3;
     color: #363636;
-    box-shadow: 3px 5px 2px #FFADC6;
+    box-shadow: 3px 5px 2px $color-toad;;
   }
   h2 {
     color: #fff;
@@ -65,7 +65,7 @@
             path {
               fill: #fff;
                 &:last-child {
-                  fill: $color-pink;
+                  fill: $color-toad;
                 }
             }
           }
@@ -74,7 +74,7 @@
       .menu_horizontal {
         .list li {
           &::after {
-            background-color: #FFADC6;
+            background-color: $color-toad;
           }
           .link_menu {
             color: rgba(255, 255, 255, 0.7);
@@ -83,7 +83,7 @@
       }
       .contact {
         .link_bold {
-          color: #FFADC6;
+          color: $color-toad;
             &:hover {
               opacity: 0.7;
             }
@@ -123,7 +123,7 @@
         &:hover {
           border-color: transparent;
             &::after {
-              background-color: $color-pink;
+              background-color: $color-toad;
             }
         }
         .left {
@@ -175,16 +175,16 @@
   }
 
   .form__checkbox > input:checked ~ .form__checkbox_indicator {
-    border-color: $color-pink;
+    border-color: $color-toad;
     background: transparent;
   }
 
   .form__checkbox > input:checked ~ .form__checkbox_text {
-    color: $color-pink;
+    color: $color-toad;
   }
 
   .link_violet {
-    color: $color-pink;
+    color: $color-toad;
   }
 
   //footer
@@ -209,6 +209,10 @@
         }
       }
     }
+  }
+
+  .form_left a {
+    color: $color-toad;
   }
 
 }
