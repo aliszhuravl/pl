@@ -8,17 +8,13 @@
 
 .change_theme {
 
-  .hero.desktop .main_star {
-    mix-blend-mode: lighten;
-  }
-
   .hero.desktop .hero_services {
     opacity: 0.5;
     font-family: $font-family_light;
   }
 
   .hero.desktop .main_text__inner p {
-    opacity: 0.66;
+    opacity: 0.8;
     font-family: $font-family_light;
   }
 
@@ -29,22 +25,24 @@
   .light_theme {
     display: none;
   }
-
   transition: all 0.3s;
   color: #fff;
     .page-container {
       background-color: #1E1E1E;
+      background-image: url('../img/noise.png');
+      background-blend-mode: overlay;
     }
   .btn {
-    background-color: #F3F3F3;
-    color: #363636;
-    box-shadow: 3px 5px 2px $color-toad;;
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+    box-shadow: 3px 5px 2px $color-toad;
   }
   h2 {
     color: #fff;
   }
   .divider {
-    border: 1px solid rgba(255, 255, 255, 0.11);
+    background-color: transparent;
   }
   .theme-button {
     background-color: #fff;
@@ -56,11 +54,9 @@
   //header
 
   .header {
-    border-color: rgba(255, 255, 255, 0.3);
     &__inner {
       .menu {
         .logo {
-          padding-top: 20px;
           svg {
             path {
               fill: #fff;
@@ -94,12 +90,6 @@
 
   //hero
 
-  .hero_block {
-
-    .main_star {
-
-    }
-  }
 
   //adv block
 
@@ -120,27 +110,22 @@
   .cases_block {
     &__item {
       border-color: rgba(255, 255, 255, 0.11);
-        &:hover {
-          border-color: transparent;
-            &::after {
-              background-color: $color-toad;
-            }
-        }
-        .left {
 
-          .case_name {
+      &:hover {
+        border-color: transparent;
+
+        &::after {
+          background-color: $color-toad;
+        }
+      }
+
+      .left {
+        .case_name {
+          &__title, &__date {
             color: rgba(255, 255, 255, 1);
           }
-          .case_works {
-            color: rgba(255, 255, 255, 0.7);
-          }
-          .case_tags {
-            color: rgba(255, 255, 255, 0.7);
-          }
-            .case_text {
-              color: rgba(255, 255, 255, 0.7);
-            }
         }
+      }
     }
   }
 
@@ -172,6 +157,9 @@
 
     &::-webkit-input-placeholder {  color: rgba(255, 255, 255, 0.4); transition: color .3s;}
     &::-moz-placeholder          {  color: rgba(255, 255, 255, 0.4); transition: color .3s;}
+
+    &:focus::-webkit-input-placeholder {color: transparent; transition: color .3s;}
+    &:focus::-moz-placeholder          {color: transparent; transition: color .3s;}
   }
 
   .form__checkbox > input:checked ~ .form__checkbox_indicator {
@@ -188,10 +176,6 @@
   }
 
   //footer
-
-  .footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-  }
 
   //services page
 

@@ -8,5 +8,10 @@ $(document).ready(function(){
             classToAdd: 'visible animated fadeIn',
             offset: 100
         });
+
+        $('.bigger_animate').viewportChecker({
+            classToAdd: 'visible animated_long bigger',
+            offset: 100
+        });
     }
 });

@@ -28,12 +28,13 @@
         display: flex;
         align-items: center;
         width: 100%;
+        justify-content: flex-end;
           a {
-            margin-right: 32px;
+            margin-right: 24px;
             img {
-              margin-left: 24px;
-              max-height: 15px;
-              max-width: 15px;
+              margin-left: 12px;
+              max-height: 18px;
+              max-width: 18px;
               margin-bottom: 0 !important;
               display: block;
             }
@@ -118,21 +119,30 @@
 
 
 @media (min-width: 1599px) {
+
+  .case_page__info_body__left, .form_left, .case_page .hero_case .back {
+    margin-right: 120px;
+  }
+
   .aboutme .section_body .left {
     padding-right: 3%;
   }
   .aboutme .section_body .right img {
     min-width: 420px;
   }
-  .layout-inner, .header__inner, .page__inner, .footer__inner {
+  .layout-inner, .header__inner, .footer__inner {
     padding: 0 4rem;
   }
 
+  .page__inner {
+    padding: 0 12rem;
+  }
+
   .header__inner .menu .menu_horizontal .list li {
-    margin: 0 50px;
-    padding-top: 34px;
+    margin: 0 32px;
     .link_menu {
-      font-size: 20px;
+      font-size: 18px;
+      line-height: 18px;
     }
   }
   .logo .desktop {
@@ -141,12 +151,6 @@
     }
   }
 
-  .form_right .field_bar__items {
-    max-width: 85%;
-  }
-  .header__inner .menu .contact {
-    padding-top: 34px;
-  }
   .cases_block__item .right {
     position: relative;
     width: 55%;
@@ -168,8 +172,79 @@
 
 @media (max-width: 1199px) {
 
+
+  .header__inner .menu {
+    background-image: none;
+    padding: 0;
+    justify-content: space-between;
+  }
+
+  .header__inner .right_menu {
+    display: none;
+  }
+
+  .hero.desktop .main_text__inner {
+    margin-bottom: 32px;
+  }
+
+  .page__item.hero_block {
+    margin-bottom: 24px;
+  }
+
+  .adv_block {
+    justify-content: flex-start;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .section_header h2 {
+    line-height: inherit;
+  }
+
+  .hero.desktop .main_text .main_links {
+    justify-content: flex-start;
+  }
+
   .tablet {
     display: block !important;
+  }
+
+  .cases_full, .form {
+    background-image: none;
+    padding: 0;
+  }
+
+  .cases_header .mini_h2 {
+    font-size: 24px;
+  }
+
+  .cases_block__item .left .case_info {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100%;
+    justify-content: inherit;
+  }
+
+  .cases_block__item .left .case_name {
+    position: static;
+  }
+
+  .cases_block__item .left .case_name__title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .form__checkbox {
+    font-size: 11px;
+    padding: 4px 12px;
+  }
+
+  .form__checkbox_text {
+    font-size: 12px;
+  }
+
+  .form_right {
+    max-width: 100%;
   }
 
 // основные
@@ -192,6 +267,10 @@
         }
       }
     }
+  }
+
+  .change_theme .dark_img {
+    display: none;
   }
 
   .theme-button {
@@ -377,8 +456,6 @@
     h2 {
       margin-right: 0;
       max-width: 100%;
-      font-size: 40px;
-      line-height: 40px;
     }
   }
 
@@ -473,10 +550,11 @@
     flex-direction: column;
     &_left {
       width: 100%;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
         h2 {
-          font-size: 30px;
-          max-width: 90%;
+          font-size: 24px;
+          line-height: 28px;
+          max-width: 80%;
           margin-bottom: 20px;
         }
         a {
@@ -528,16 +606,34 @@
     margin-bottom: 20px;
   }
 
+  .header__inner .menu .logo svg {
+    width: 160px;
+  }
+
+  .header {
+    border-bottom: none;
+  }
 
   //footer styles
 
+  .footer {
+    padding: 20px 2rem;
+  }
+
   .footer__inner {
-    padding: 40px 1rem !important;
-    flex-direction: column;
+    background-image: none;
+    padding: 0 !important;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: space-between;
     .left {
       width: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+        img {
+          max-width: 140px;
+          display: block;
+        }
     }
     .right {
       width: 100%;
@@ -567,7 +663,6 @@
 
   .hero_block {
     min-height: inherit;
-    margin-bottom: 90px;
   }
 
   .values_container {
@@ -660,20 +755,66 @@
       }
   }
 
+  // case page
+
+  .case_page {
+    .hero_case .hero_block {
+      &__container {
+        padding-top: 0;
+        .case_title {
+          margin-bottom: 12px;
+        }
+        .case_description {
+          max-width: 400px;
+        }
+      }
+    }
+
+    .hero_block {
+      margin-bottom: 16px;
+    }
+
+    .hero_case .back {
+      width: 16%;
+      margin-right: 40px;
+      a img {
+        width: 32px;
+      }
+    }
+
+    .case_page__info_body {
+      flex-direction: column;
+      &__left {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 32px;
+          &_item {
+            margin-bottom: 18px;
+              &:last-child {
+                margin-bottom: 0;
+              }
+          }
+      }
+      &__right {
+        min-width: auto;
+        &__about {
+          margin-bottom: 32px;
+        }
+      }
+    }
+
+  }
+
+  .page__item.case_body {
+    margin-bottom: 24px;
+  }
 
 
 }
 
 
 @media (max-width: 640px) {
-
-  .header {
-    &__inner {
-      .menu .logo img {
-        max-width: 128px;
-      }
-    }
-  }
 
   //стили главной страницы
 
@@ -943,9 +1084,6 @@
               margin-bottom: 0 !important;
               margin-left: 16px;
             }
-            &:first-child {
-              display: none;
-            }
             &:last-child {
               margin-right: 0;
             }
@@ -964,23 +1102,28 @@
   }
 
   .divider {
-    width: 100%;
-    height: 1px;
-    background-color: rgba(0, 0, 0, .2);
+    border: none;
+    background-color: transparent;
   }
 
   .form__item, .form__textarea {
     border-bottom: 1px solid rgba(54, 54, 54, .2);
   }
+
   .btn {
-    font-size: 14px;
-    height: 40px;
     width: auto;
+    height: 34px;
+    font-size: 12px;
+    padding: 4px 18px;
     background: transparent;
-    padding: 6px 24px;
       &:hover, &:focus {
         color: #fff;
       }
+  }
+
+  .cases_block__item .left .case_name__title {
+    font-size: 20px;
+    margin-bottom: 6px;
   }
 
   .more_btn {
@@ -996,7 +1139,8 @@
   .cases_block__item {
     flex-direction: column-reverse;
     border-bottom: none;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
+    padding-bottom: 0;
     .left {
       width: 100%;
       .case_works {
@@ -1011,11 +1155,25 @@
     }
     .right {
       width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 12px;
+      margin-right: 0;
       img {
         width: 100%;
       }
     }
+  }
+
+  .footer {
+    padding: 0 1.2rem;
+      &__inner {
+        flex-direction: column-reverse;
+        .left {
+          justify-content: flex-start;
+        }
+        .right {
+          margin-bottom: 12px;
+        }
+      }
   }
 
   .cases_block__item .left .case_name {
@@ -1182,9 +1340,6 @@
         font-size: 24px;
         font-family: $font-family_deco_medium;
       }
-      .right .social a img {
-        height: 16px;
-      }
     }
   }
 
@@ -1196,7 +1351,7 @@
 
   .header {
     padding: 10px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border: none;
       &__inner {
         padding: 0 20px;
           .menu .logo {
@@ -1205,9 +1360,14 @@
       }
   }
 
+  .menu_mobile__inner .menu_body .links_list .link_menu {
+    font-size: 20px;
+  }
+
   .menu_mobile {
-    width: 80%;
-    max-width: 80%;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
   }
 
   .cb {
@@ -1219,4 +1379,33 @@
   .cases_block__item .left {
     max-width: 100%;
   }
+
+
+
+  // case page
+
+  .case_page .hero_case .back {
+    width: auto;
+    margin-right: 32px;
+  }
+
+  .case_page__info_body__right__team .team_box__item {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .case_page .hero_case .back {
+    width: auto;
+    margin-right: 32px;
+      a img {
+        width: 20px;
+      }
+  }
+
+  .case_page .hero_case .hero_block__container .case_title {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
 }

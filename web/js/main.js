@@ -56,7 +56,7 @@ window.onload = function() {
         });
     }
 
-    linkHighlight('.nav__link');
+    linkHighlight('.link_menu');
 
 })(jQuery);
 $(document).ready(function() {
@@ -142,10 +142,54 @@ $(document).ready(function(){
             classToAdd: 'visible animated fadeIn',
             offset: 100
         });
+
+        $('.bigger_animate').viewportChecker({
+            classToAdd: 'visible animated_long bigger',
+            offset: 100
+        });
     }
 });
 $(document).ready(function() {
     $(".theme-button").click(function () {
         $('body').toggleClass('change_theme');
     });
+});
+$(document).ready(function() {
+    $('.case_slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        centerMode: true,
+        centerPadding: '60px',
+        cssEase:'linear',
+        slidesToShow: 1,
+        autoplay:true,
+        autoplaySpeed: 5000,
+        arrows: false,
+        variableWidth: true
+    });
+});
+$(document).ready(function() {
+    var banner = $(".hero_block");
+    var imgs = $(".item");
+// /////////////////////////////////////////////////////////////
+    function showAllObjects (object) {
+        object.fadeIn(900);
+    }
+// /////////////////////////////////////////////////////////////
+    function moving (object, speed) {
+        banner.on('mousemove', function(event) {
+            var X = Math.floor((event.pageX)/speed-20) + "px";
+            var Y = Math.floor((event.pageY)/speed) + "px";
+            object.css('transform', 'translate('+X+' , '+Y+')');
+        });
+    }
+// /////////////////////////////////////////////////////////////
+    function moveAll (object) {
+        moving($(object[0]),7);
+    }
+// /////////////////////////////////////////////////////////////
+    showAllObjects(imgs);
+    moveAll(imgs);
+// /////////////////////////////////////////////////////////////
 });

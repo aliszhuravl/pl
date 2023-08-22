@@ -7,3 +7,5 @@
 //= parts/_burger.js
 //= parts/_vp-animate.js
 //= parts/_watch.js
+//= parts/_slick.js
+//= parts/_follow.js

@@ -25,3 +25,8 @@
   text-decoration: none;
   font-family: $font-family_bold;
 }
+
+.link_active {
+  color: $color-toad !important;
+  margin-top: 10px;
+}

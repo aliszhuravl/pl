@@ -27,3 +27,10 @@
   color: $color-toad;
   text-decoration: none;
 }
+
+.link_contact {
+  color: $color-toad;
+    span {
+      padding: 0 6px;
+    }
+}

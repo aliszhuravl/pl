@@ -7,7 +7,12 @@
   margin-bottom: 10px;
   cursor: pointer;
   font-size: $font_default;
-  padding: 12px 20px;
+
+  padding: 6px 18px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
 }
 
 .form__checkbox_hidden {
@@ -44,7 +49,7 @@
   z-index: 1;
   pointer-events: none;
 
-  font-size: 18px;
+  font-size: calc(13px + (18 - 13) * ((100vw - 375px) / (1920 - 375)));
   transition: all 0.2s;
 
 }

@@ -9,6 +9,6 @@
         });
     }
 
-    linkHighlight('.nav__link');
+    linkHighlight('.link_menu');
 
 })(jQuery);

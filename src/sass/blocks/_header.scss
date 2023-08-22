@@ -5,21 +5,40 @@
 }
 
 .header__inner {
-  @extend .layout-inner;
+  padding: 0 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
+  .right_menu {
+    display: flex;
+    justify-content: flex-end;
+    width: inherit;
+  }
     .menu {
+      position: relative;
+      margin-top: 1%;
       width: 100%;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start;
+      background-image: url('../img/line.svg');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      -webkit-background-size:contain;
+      background-size: contain;
+      padding: 1%;
         .logo {
-          padding-top: 20px;
+          width: 45%;
+          max-width: 420px;
+          margin-right: 50px;
+            svg {
+              width: 200px;
+              display: block;
+            }
         }
         .contact {
-          padding-top: 20px;
+
         }
         .menu_horizontal {
           width: fit-content;
@@ -32,26 +51,17 @@
             padding: 0;
             background-color: transparent;
               li {
-                margin: 0 32px;
-                padding-top: 20px;
                 position: relative;
-                &:after {
-                  width: 100%;
-                  position: absolute;
-                  content: '';
-                  background-color: $color-toad;
-                  top: -15px;
-                  left: 0;
-                  height: 0;
-                }
-
+                margin: 0 20px;
+                  &:first-child {
+                    margin-left: 0;
+                  }
                 .link_menu {
-                  font-weight: 500;
-                  font-size: calc(13px + (17 - 13) * ((100vw - 375px) / (1920 - 375)));
-                  line-height: 16px;
-                  letter-spacing: -0.01em;
-                  font-family: $font-family_deco;
+                  font-family: $font-family;
                   color: #363636;
+                    span {
+                      padding: 0 6px;
+                    }
                 }
 
                 &:hover {

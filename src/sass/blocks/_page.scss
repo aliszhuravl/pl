@@ -34,16 +34,8 @@
 
 .cases_block__item {
   position: relative;
-    &:after {
-      position: absolute;
-      content: '';
-      height: 3px;
-      width: 0;
-      bottom: 0;
-      left: 0;
-      background-color: $color-toad;
-      transition: all 0.3s;
-    }
+  display: flex;
+  flex-direction: row;
   .right {
     position: relative;
       .case_img_back {

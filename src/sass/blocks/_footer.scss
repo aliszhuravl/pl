@@ -1,17 +1,29 @@
 .footer {
-  @extend .layout-padding;
   background-color: #1E1E1E;
+  background-image: url('../img/noise.png');
+  background-blend-mode: overlay;
   width: 100%;
+  padding: 0 3rem;
+  border: 0;
 }
 
 .footer__inner {
   width: 100%;
-  @extend .layout-inner;
   display: flex;
-  align-items:flex-end;
+  align-items:flex-start;
   justify-content: space-between;
-  padding: 90px 3rem !important;
+  background-image: url('../img/line.svg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-background-size:contain;
+  background-size: contain;
+  flex-direction: row-reverse;
+  padding: 1%;
+
     .left {
+        img {
+          max-width: 160px;
+        }
         .list {
           list-style-type: none;
           padding: 0;
@@ -50,16 +62,16 @@
         margin-top: 32px;
         font-size: 17px;
         line-height: 20px;
-        text-align: right;
+        text-align: left;
 
         color: #FFFFFF;
         font-family: $font-family_light;
         opacity: 0.7;
       }
     }
-    .link_violet {
-      font-size: 32px;
-      line-height: 32px;
-      text-align: right;
+  .link_contact {
+    span {
+      padding: 0 6px;
     }
+  }
 }

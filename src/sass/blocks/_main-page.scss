@@ -2,6 +2,7 @@
   width: 100%;
   margin-bottom: 6%;
   min-height: 50vh;
+  position: relative;
     &__container {
       position: relative;
       width: 100%;
@@ -65,34 +66,80 @@
   padding: 0;
 }
 
+.cases_header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: baseline;
+  margin-bottom: 24px !important;
+    .mini_h2 {
+      font-size: calc(20px + (32 - 20) * ((100vw - 1200px) / (1920 - 1200)));
+      font-family: $font-family_deco;
+      font-weight: normal;
+    }
+    .link {
+      color: $color-toad;
+      span {
+        padding: 0 6px;
+      }
+    }
+}
+
+.cases_full {
+  background-image: url('../img/line.svg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-background-size: contain;
+  background-size: contain;
+  padding: 1%;
+}
+
 .cases_block {
   width: 100%;
+
     &__item {
       cursor: pointer;
       width: 100%;
       display: flex;
       align-items: stretch;
       justify-content: space-between;
-      flex-direction: row-reverse;
-      padding: 60px 0;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      flex-direction: row;
+      padding: 40px 0;
+      //border-bottom: 1px solid rgba(0, 0, 0, 0.2);
       position: relative;
+      overflow: hidden;
 
         .left {
-          margin-left: 50px;
+          margin-left: 10%;
           display: flex;
           flex-direction: column;
-          height: auto;
-          justify-content: center;
+          justify-content: space-between;
           max-width: 50%;
+            .case_info {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              height: 100%;
+            }
             .case_name {
-              font-size: 32px;
-              line-height: 36px;
-              letter-spacing: -0.01em;
-              font-family: $font-family_deco_medium;
-              margin-bottom: 20px;
-              color: #363636;
-              text-decoration: none;
+              position: absolute;
+              top: calc(50% - 60px);
+              left: 15%;
+              z-index: 2;
+
+                &__title {
+                  font-size: calc(54px + (60 - 54) * ((100vw - 1200px) / (1920 - 1200)));
+                  font-family: $font-family_deco;
+                  margin-bottom: 20px;
+                  color: #363636;
+                  text-decoration: none;
+                }
+                &__date {
+                  font-size: calc(14px + (32 - 14) * ((100vw - 375px) / (1920 - 375)));
+                  color: #363636;
+                  font-family: $font-family_light;
+                  opacity: 0.6;
+                }
             }
               .case_works {
                 font-size: 20px;
@@ -126,8 +173,10 @@
         .right {
           max-width: 50%;
           width: 50%;
+          margin-right: 10%;
             img {
               width: 100%;
+              transform: scale(1.1);
             }
         }
       &:hover {
@@ -248,36 +297,50 @@
 .divider {
   width: 100%;
   height: 1px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: transparent;
   margin-bottom: 60px;
+  opacity: 0;
 }
 
 .form {
   width: 100%;
   display: flex;
+  background-image: url('../img/line.svg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-background-size:contain;
+  background-size: contain;
+  padding: 1%;
     &_left {
       width: 45%;
+      max-width: 420px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       margin-right: 50px;
         h2 {
-          font-size: calc(30px + (36 - 30) * ((100vw - 1199px) / (1920 - 1199)));
+          font-size: calc(24px + (28 - 24) * ((100vw - 1199px) / (1920 - 1199)));
           max-width: 100%;
+          letter-spacing: 1px;
+          font-family: $font-family-deco;
+          font-weight: normal;
         }
         a {
-          font-size: 24px;
-          line-height: 24px;
-          text-decoration-line: underline;
+          font-size: calc(13px + (18 - 13) * ((100vw - 375px) / (1920 - 375)));
+          line-height: calc(18px + (24 - 18) * ((100vw - 375px) / (1920 - 375)));
           transition: all 0.2s;
+            span {
+              padding: 0 6px;
+            }
             &:hover {
-              text-decoration: none;
               transition: all 0.2s;
+              color: $color-fat-toad;
             }
         }
     }
     &_right {
       padding-top: 100px;
+      max-width: 55%;
       width: auto;
         .field_bar {
           margin-bottom: 40px;
