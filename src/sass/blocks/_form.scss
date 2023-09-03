@@ -5,7 +5,8 @@
   height: 42px;
   margin-bottom: 32px;
   padding: 4px 6px;
-  border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.8);
   border-top: 0;
   border-right: 0;
   border-left: 0;
@@ -17,24 +18,28 @@
   line-height: calc(18px + (24 - 18) * ((100vw - 375px) / (1920 - 375)));
   letter-spacing: -0.01em;
 
-  color: #363636;
+  color: #fff;
 
-  &::-webkit-input-placeholder {  color: rgba(54, 54, 54, 0.5); transition: color .3s;}
-  &::-moz-placeholder          {  color: rgba(54, 54, 54, 0.5); transition: color .3s;}
+  &::-webkit-input-placeholder {  color: rgba(255, 255, 255, 0.8); transition: color .3s;}
+  &::-moz-placeholder          {  color: rgba(255, 255, 255, 0.8); transition: color .3s;}
   
   &:focus {
     outline: 0;
-    border-color: #363636;
+    border-color: rgba(255, 255, 255, 1);
   }
 
   &[disabled] {
-    background-color: $color-gray-10;
+    background-color: rgba(255, 255, 255, 0.3);
     cursor: default;
   }
 
   &:invalid {
-    //border-color: $color-peach; // TODO: не забыть про валидацию
+    border-color: $color-peach;
   }
+
+  &:invalid::-webkit-input-placeholder {color: $color-peach; transition: all .3s; content: 'Заполните, пожалуйста, это поле';}
+  &:invalid::-moz-placeholder          {color: $color-peach; transition: all .3s; content: 'Заполните, пожалуйста, это поле';}
+
 
   &:focus::-webkit-input-placeholder {color: transparent; transition: all .3s;}
   &:focus::-moz-placeholder          {color: transparent; transition: all .3s;}
@@ -50,7 +55,8 @@
   resize: none;
   margin-bottom: 40px;
   padding: 4px 6px;
-  border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.8);
   border-top: 0;
   border-right: 0;
   border-left: 0;
@@ -62,18 +68,18 @@
   line-height: calc(18px + (24 - 18) * ((100vw - 375px) / (1920 - 375)));
   letter-spacing: -0.01em;
 
-  color: #363636;
+  color: #fff;
 
-  &::-webkit-input-placeholder {  color: rgba(54, 54, 54, 0.5); transition: color .3s;}
-  &::-moz-placeholder          {  color: rgba(54, 54, 54, 0.5); transition: color .3s;}
+  &::-webkit-input-placeholder {  color: rgba(255, 255, 255, 0.8); transition: color .3s;}
+  &::-moz-placeholder          {  color: rgba(255, 255, 255, 0.8); transition: color .3s;}
 
   &:focus {
     outline: 0;
-    border-color: #363636;
+    border-color: rgba(255, 255, 255, 1);
   }
 
   &[disabled] {
-    background-color: $color-gray-10;
+    background-color: rgba(255, 255, 255, 0.3);
     cursor: default;
   }
 

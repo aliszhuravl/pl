@@ -33,17 +33,15 @@
 
   display: block;
   pointer-events: none;
-  transition: .25s cubic-bezier(.645,.045,.355,1);
   background:transparent;
 
   border-radius: 40px;
-
-  border: 1px solid #363636;
+  border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 .form__checkbox_text {
   font-family: $font-family;
-  color: #363636;
+  color: rgba(255, 255, 255, 0.7);
   display: block;
   position: relative;
   z-index: 1;
@@ -57,11 +55,11 @@
 //стили отмеченного чекбокса
 .form__checkbox > input:checked ~ .form__checkbox_indicator {
   background: transparent;
-  border-color: $color-fat-toad;
+  border-color: $color-toad;
 }
 
 .form__checkbox > input:checked ~ .form__checkbox_text {
-  color: $color-fat-toad;
+  color: $color-toad;
 }
 
 //стили неотмеченного чекбокса
@@ -72,19 +70,19 @@
 
 //стиль при получении фокуса
 .form__checkbox > input:focus ~ .form__checkbox_indicator {
-  color: $color-fat-toad;
+  color: $color-toad;
 
 
 }
 
 //стили отключенного чекбокса
 .form__checkbox > input:disabled ~ .form__checkbox_indicator {
-  background-color: $color-gray-35;
+  background-color: rgba(255, 255, 255, 0.3);
   cursor: default;
 
 }
 
 .form__checkbox > input:disabled ~ .form__checkbox_text {
-  color: $color-gray-50;
+  color: rgba(255, 255, 255, 0.3);
   cursor: default;
 }

@@ -3,10 +3,10 @@
   vertical-align: top;
   text-decoration: none;
   transition: color, .2s;
-  color: #363636;
+  color: rgba(255, 255, 255, 0.96);
 
   &:hover {
-    color: $color-fat-toad;
+    color: $color-toad;
   }
 
   &:focus,

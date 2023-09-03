@@ -19,7 +19,7 @@ body {
   font-weight: 500;
   font-size: calc(13px + (18 - 13) * ((100vw - 375px) / (1920 - 375)));
   letter-spacing: -0.01em;
-  color: #363636;
+  color: rgba(255, 255, 255, 0.96);
 
   font-family: $font-family;
 }
@@ -38,18 +38,19 @@ h1 {
   font-size: calc(64px + (108 - 64) * ((100vw - 1199px) / (1920 - 1199)));
   text-transform: uppercase;
   font-family: $font-family_deco_bold;
+  font-weight: normal;
 }
 
 h2 {
   font-family: $font-family_deco_bold;
   max-width: 50%;
   letter-spacing: -0.02em;
-  color: #353535;
   font-size: calc(24px + (84 - 24) * ((100vw - 375px) / (1920 - 375)));
   margin: 0;
+  font-weight: normal;
 }
 
 h3 {
   margin-bottom: 15px;
-  font-weight: bold;
+  font-weight: normal;
 }

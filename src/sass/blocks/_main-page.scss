@@ -7,8 +7,6 @@
       position: relative;
       width: 100%;
       display: flex;
-      align-items: center;
-      justify-content: center;
         img {
           width: 100%;
           margin-bottom: 60px !important;
@@ -66,17 +64,18 @@
   padding: 0;
 }
 
+.mini_h2 {
+  font-size: calc(20px + (32 - 20) * ((100vw - 1200px) / (1920 - 1200)));
+  font-family: $font-family_deco;
+  font-weight: normal;
+}
+
 .cases_header {
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-items: baseline;
   margin-bottom: 24px !important;
-    .mini_h2 {
-      font-size: calc(20px + (32 - 20) * ((100vw - 1200px) / (1920 - 1200)));
-      font-family: $font-family_deco;
-      font-weight: normal;
-    }
     .link {
       color: $color-toad;
       span {
@@ -96,7 +95,6 @@
 
 .cases_block {
   width: 100%;
-
     &__item {
       cursor: pointer;
       width: 100%;
@@ -105,7 +103,6 @@
       justify-content: space-between;
       flex-direction: row;
       padding: 40px 0;
-      //border-bottom: 1px solid rgba(0, 0, 0, 0.2);
       position: relative;
       overflow: hidden;
 
@@ -131,44 +128,16 @@
                   font-size: calc(54px + (60 - 54) * ((100vw - 1200px) / (1920 - 1200)));
                   font-family: $font-family_deco;
                   margin-bottom: 20px;
-                  color: #363636;
+                  color: #fff;
                   text-decoration: none;
                 }
                 &__date {
                   font-size: calc(14px + (32 - 14) * ((100vw - 375px) / (1920 - 375)));
-                  color: #363636;
                   font-family: $font-family_light;
                   opacity: 0.6;
+                  color: #fff;
                 }
             }
-              .case_works {
-                font-size: 20px;
-                font-family: $font-family_deco_medium;
-                margin-bottom: 12px;
-                color: #363636;
-                text-decoration: none;
-              }
-              .case_text {
-                font-family: $font-family_light;
-                font-size: calc(14px + (20 - 14) * ((100vw - 375px) / (1920 - 375)));
-                letter-spacing: -0.01em;
-                color: rgba(54, 54, 54, 0.6);
-                margin-bottom: 40px;
-                max-width: 80%;
-                color: #363636;
-                text-decoration: none;
-              }
-              .case_tags {
-                color: #363636;
-                text-decoration: none;
-              }
-              .arrow_box {
-                position: absolute;
-                width: fit-content;
-                right: 0;
-                bottom: 60px;
-                opacity: 0;
-              }
         }
         .right {
           max-width: 50%;
@@ -179,11 +148,6 @@
               transform: scale(1.1);
             }
         }
-      &:hover {
-        .arrow_box {
-          opacity: 1;
-        }
-      }
     }
 }
 
@@ -235,6 +199,12 @@
         margin-bottom: 32px;
         display: block;
         width: 100%;
+        svg {
+          display: block;
+          path {
+            fill: #fff;
+          }
+        }
       }
       &_p {
         max-width: 90%;
@@ -270,37 +240,6 @@
     }
 }
 
-.partners_block {
-  padding: 0 90px;
-  &__text {
-    margin-bottom: 60px;
-    font-family: 'Montserrat';
-    font-style: italic;
-    font-weight: 400;
-    font-size: calc(20px + (48 - 20) * ((100vw - 375px) / (1920 - 375)));
-
-  }
-  .adv_block {
-    padding: 0;
-      &__item {
-
-        p {
-          font-size: 32px;
-          line-height: 37px;
-          font-family: $font-family_bold;
-          margin-bottom: 32px;
-        }
-      }
-  }
-}
-
-.divider {
-  width: 100%;
-  height: 1px;
-  background-color: transparent;
-  margin-bottom: 60px;
-  opacity: 0;
-}
 
 .form {
   width: 100%;
@@ -319,23 +258,11 @@
       justify-content: space-between;
       margin-right: 50px;
         h2 {
-          font-size: calc(24px + (28 - 24) * ((100vw - 1199px) / (1920 - 1199)));
+          font-size: calc(20px + (32 - 20) * ((100vw - 1200px) / (1920 - 1200)));
           max-width: 100%;
           letter-spacing: 1px;
           font-family: $font-family-deco;
           font-weight: normal;
-        }
-        a {
-          font-size: calc(13px + (18 - 13) * ((100vw - 375px) / (1920 - 375)));
-          line-height: calc(18px + (24 - 18) * ((100vw - 375px) / (1920 - 375)));
-          transition: all 0.2s;
-            span {
-              padding: 0 6px;
-            }
-            &:hover {
-              transition: all 0.2s;
-              color: $color-fat-toad;
-            }
         }
     }
     &_right {
@@ -363,12 +290,4 @@
           max-width: 800px;
         }
     }
-}
-
-.form_header {
-  margin-bottom: 60px;
-}
-
-.img_container {
-  position: relative;
 }

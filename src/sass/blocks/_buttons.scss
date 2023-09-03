@@ -3,9 +3,6 @@
   vertical-align: top;
   height: 48px;
   padding: 6px 20px;
-  color: #363636;
-  border: 1px solid #363636;
-  box-shadow: 3px 5px 2px #363636;
   border-radius: 50px;
   font-size: calc(14px + (18 - 14) * ((100vw - 1280px) / (1920 - 1280)));
   letter-spacing: 0.3px;
@@ -16,6 +13,9 @@
   align-items: center;
   background: transparent;
   justify-content: center;
+  color: #fff;
+  box-shadow: 3px 5px 1px $color-toad;
+  border: 1px solid #fff;
 
   text-align: center;
   white-space: nowrap;
@@ -34,11 +34,11 @@
   
   &:hover,
   &:focus {
-    box-shadow: 3px 5px 2px $color-toad;
+    box-shadow: 3px 8px 1px #fff;
   }
   
   &:active {
-    box-shadow: 3px 5px 2px $color-toad;
+    box-shadow: 3px 5px 1px #fff;
   }
 }
 

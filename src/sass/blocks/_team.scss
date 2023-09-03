@@ -1,0 +1,119 @@
+.team {
+  margin-bottom: 50px;
+}
+
+.team_block {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0 6%;
+  &__item {
+    border: 1px solid rgba(255, 255, 255, 0.70);
+    padding: 24px 24px 14px 24px;
+
+    width: calc(33.3333% - 42px);
+    margin-right: 60px;
+    margin-bottom: 60px;
+      &:nth-child(3n+3) {
+        margin-right: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+
+    &_img {
+      width: 100%;
+      margin-bottom: 20px;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    &_info {
+      text-decoration: none;
+      .name {
+        font-size: calc(18px + (28 - 18) * ((100vw - 1199px) / (1920 - 1199)));
+        margin-bottom: 4px;
+        line-height: normal;
+        text-transform: uppercase;
+        color: #fff;
+        text-decoration: none;
+      }
+      .role {
+        color: rgba(255, 255, 255, 0.60);
+        font-size: calc(14px + (20 - 14) * ((100vw - 375px) / (1920 - 375)));
+        margin-bottom: 32px;
+        text-decoration: none;
+      }
+    }
+
+
+    &:hover, &:focus {
+      border-color: $color-toad;
+      &_info {
+        .name, .role {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.photo {
+  margin-top: 40px;
+  min-width: 400px;
+    img {
+      margin-bottom: 0 !important;
+    }
+}
+
+.page-team {
+  .values {
+    margin-bottom: 90px;
+  }
+}
+
+.page-member {
+  .page__item {
+    margin-bottom: 40px;
+  }
+}
+
+.next_block__title {
+  width: 100%;
+  h2 {
+    font-family: $font-family_deco;
+    font-weight: normal;
+    letter-spacing: 1px;
+    font-size: calc(20px + (48 - 20) * ((100vw - 375px) / (1920 - 375)));
+    text-align: left;
+    margin-bottom: 0;
+    text-transform: inherit;
+    max-width: unset;
+  }
+}
+
+.team_body {
+  &__inner {
+    width: 100%;
+    margin-top: 60px;
+      &_text {
+        margin-left: 6%;
+        margin-bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        &_p {
+          font-size: calc(13px + (20 - 13) * ((100vw - 375px) / (1920 - 375)));
+          line-height: calc(18px + (26 - 18) * ((100vw - 375px) / (1920 - 375)));
+          letter-spacing: 0.3px;
+          margin-bottom: 24px;
+          opacity: 0.6;
+          min-width: 420px;
+          max-width: 600px;
+        }
+      }
+  }
+}

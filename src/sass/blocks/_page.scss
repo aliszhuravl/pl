@@ -7,9 +7,11 @@
   min-width: 320px;
   width: 100%;
   min-height: 100%;
-  background-color: transparent;
-  background-image: url('../img/fone.png');
   background-repeat: repeat;
+
+  background-color: #1E1E1E;
+  background-image: url('../img/noise.png');
+  background-blend-mode: overlay;
 }
 
 .page {
@@ -98,8 +100,9 @@
       .case_info {
         display: flex;
         flex-direction: row;
+        justify-content: flex-start;
           .case_name {
-            color: #363636;
+            position: static;
             width: 40%;
             margin-bottom: 0;
             margin-right: 60px;
@@ -111,12 +114,9 @@
         .case_text {
           width: 40%;
           margin-bottom: 0;
-          color: #363636;
+          opacity: 0.6;
         }
       }
-    }
-    &:first-child {
-      border-top: 1px solid rgba(0, 0, 0, .2);
     }
     &:hover {
       .right {
