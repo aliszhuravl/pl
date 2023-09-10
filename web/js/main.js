@@ -168,6 +168,28 @@ $(document).ready(function() {
         arrows: false,
         variableWidth: true
     });
+
+    $('.news_block').slick({
+        dots: false,
+        infinite: true,
+        cssEase:'linear',
+        slidesToShow: 4,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
 });
 $(document).ready(function() {
     var banner = $(".hero_block");

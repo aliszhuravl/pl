@@ -2,8 +2,9 @@
   justify-content: flex-start;
   .team_block__item {
     border: none;
-    padding: 0;
     margin-bottom: 40px;
+    margin-right: 0;
+    padding: 24px;
       .news_block__img {
         width: 100%;
         height: 240px;
@@ -15,9 +16,36 @@
           }
       }
       &_info {
-        .date {
-          opacity: 0.5;
-          margin-bottom: 16px;
+          &_posted-by {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            .date {
+              opacity: 0.5;
+            }
+            .authors {
+              display: flex;
+              &_item {
+                border-radius: 50%;
+                overflow: hidden;
+                width: 40px;
+                height: 40px;
+                margin-right: -12px;
+                img {
+                  display: block;
+                  object-fit: cover;
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+          }
+
+        p {
+          font-size: calc(14px + (18 - 14) * ((100vw - 1200px) / (1920 - 1200)));
         }
       }
     &:hover {
@@ -25,5 +53,9 @@
         color: rgba(255, 255, 255, .96);
       }
     }
+  }
+
+  .team_block__item:nth-child(3n+3) {
+    margin-right: 0;
   }
 }
