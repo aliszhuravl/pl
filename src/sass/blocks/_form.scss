@@ -20,8 +20,8 @@
 
   color: #fff;
 
-  &::-webkit-input-placeholder {  color: rgba(255, 255, 255, 0.8); transition: color .3s;}
-  &::-moz-placeholder          {  color: rgba(255, 255, 255, 0.8); transition: color .3s;}
+  &::-webkit-input-placeholder { color: rgba(255, 255, 255, 0.8); transition: color .3s;}
+  &::-moz-placeholder          { color: rgba(255, 255, 255, 0.8); transition: color .3s;}
   
   &:focus {
     outline: 0;

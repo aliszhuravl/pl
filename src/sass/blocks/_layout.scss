@@ -9,6 +9,12 @@
 
 .img_container {
   position: relative;
+  svg {
+    width: 100%;
+    path {
+      fill: #fff;
+    }
+  }
 }
 
 .hero.desktop {
@@ -16,18 +22,19 @@
   width: 100%;
   position: relative;
   .main_text {
-    margin-top: 90px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 2%;
       &__inner {
         width: 100%;
         margin-bottom: 40px;
         p {
-          font-size: calc(22px + (26 - 22) * ((100vw - 1199px) / (1920 - 1199)));
+          font-size: calc(18px + (26 - 18) * ((100vw - 1199px) / (1920 - 1199)));
           max-width: 55%;
           text-transform: uppercase;
           opacity: 0.8;
-          font-family: $font-family_light;
+          font-family: $font-family;
         }
       }
       .main_links {
@@ -52,6 +59,7 @@
   }
 
   .hero_services {
+    display: none;
     opacity: 0.9;
     font-family: $font-family_light;
     position: absolute;
@@ -72,10 +80,6 @@
 
 .photo_mobile {
   display: none;
-}
-
-.hero_block__container img {
-  margin-bottom: 40px;
 }
 
 .hero.mobile {
@@ -114,12 +118,18 @@
   }
 }
 
+// для ебучих ебанистически огромных экранов
+
+@media (min-width: 2000px) {
+
+}
+
 // для очень больших экранов
 
 @media (min-width: 1599px) {
 
   .header__inner .menu .logo svg {
-    width: calc(300px + (400 - 300) * ((100vw - 1600px) / (2550 - 1600)));
+    width: calc(200px + (400 - 200) * ((100vw - 1600px) / (2550 - 1600)));
   }
 
   .case_page__info_body__left, .form_left, .case_page .hero_case .back {
@@ -149,10 +159,24 @@
     }
   }
 
+  .team_block__item, .news_block .team_block__item {
+    padding: 16px;
+  }
+
+  .news_block .team_block__item_info p {
+    font-size: calc(18px + (24 - 18) * ((100vw - 1600px) / (2550 - 1600)));
+    padding-bottom: 10px;
+  }
+
+  .form_left p, .hero_block__container.centered_ttl p {
+    font-size: calc(18px + (24 - 18) * ((100vw - 1600px) / (2550 - 1600)));
+    max-width: 400px;
+  }
+
   .btn {
-    height: calc(60px + (80 - 60) * ((100vw - 1600px) / (2550 - 1600)));
+    height: calc(54px + (80 - 54) * ((100vw - 1600px) / (2550 - 1600)));
     padding: 6px 30px;
-    font-size: calc(20px + (30 - 20) * ((100vw - 1600px) / (2550 - 1600)));
+    font-size: calc(16px + (30 - 16) * ((100vw - 1600px) / (2550 - 1600)));
   }
 
   .hero.desktop .main_text .main_links a img {
@@ -162,8 +186,16 @@
     width: auto;
   }
 
+  .adv_block__item_p {
+    max-width: 85%;
+  }
+
+  .case_date, .cases_block__item .left .case_name__date {
+    font-size: 24px;
+  }
+
   .hero.desktop .main_text__inner p {
-    max-width: 50%;
+    max-width: 55%;
     font-size: calc(24px + (40 - 24) * ((100vw - 1600px) / (2550 - 1600)));
   }
 
@@ -256,17 +288,9 @@
 
 @media (max-width: 1300px) and (min-width: 1200px) {
   .page__inner, .footer {
-    padding: 0 1rem;
+    padding: 0 2rem;
   }
 
-  .team_block__item {
-    .form__checkbox {
-      padding: 4px 14px;
-      &_text {
-        font-size: 13px;
-      }
-    }
-  }
   .case_tags {
     position: absolute;
     max-width: 30%;
@@ -280,6 +304,40 @@
 }
 
 @media (max-width: 1199px) {
+
+  // fone
+
+  .light_theme .page-container:after {
+    background-position: bottom;
+  }
+
+  //hero
+
+  .light_theme .hero_block__container {
+    padding: 0;
+    height: 95vh;
+  }
+
+  .light_theme .hero.desktop .main_text {
+    margin-top: 32px;
+  }
+
+  .desktop_hero {
+    display: none;
+  }
+
+  .hero.desktop .main_text__inner p {
+    font-size: calc(18px + (24 - 18) * ((100vw - 375px) / (1199 - 375)));
+    text-transform: none;
+    margin-bottom: 0;
+    max-width: 80%;
+  }
+
+  .section_header h2.maxi_h2 {
+    font-size: 60px;
+    line-height: 64px;
+    max-width: 80%;
+  }
 
   //team page
 
@@ -308,17 +366,20 @@
       margin-right: 32px;
       margin-bottom: 32px;
       padding: 16px 16px 6px 16px;
-      &:nth-child(3n+3) {
-        margin-right: 32px;
-      }
-        &:nth-child(2n) {
-          margin-right: 0;
-        }
     }
   }
 
+  .team_block.slick-slider .slick-list, .news_block.slick-slider .slick-list {
+    margin-right: -32px;
+  }
+
   .team_body__inner_text {
-    margin-left: 8%;
+    margin-left: 0;
+      p {
+        margin-bottom: 8px;
+        font-size: 16px;
+        max-width: 100%;
+      }
   }
 
   .page-team {
@@ -347,7 +408,7 @@
   }
 
   .hero.desktop .main_text__inner {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
   }
 
   .page__item.hero_block {
@@ -355,7 +416,7 @@
   }
 
   .adv_block {
-    justify-content: flex-start;
+    justify-content: flex-end;
     padding: 0;
     margin-bottom: 0;
   }
@@ -373,22 +434,28 @@
   }
 
   .cases_full, .form, .page__item.values, .aboutme {
-    padding: 2%;
+    padding: 0;
   }
 
   .cases_header {
-    margin-bottom: 32px !important;
+    margin-bottom: 40px !important;
   }
 
   .cases_header .mini_h2 {
     font-size: 16px;
   }
 
-  .cases_block__item .left .case_info {
-    display: flex;
-    flex-direction: column-reverse;
-    height: 100%;
-    justify-content: inherit;
+  .cases_block__item .left  {
+    margin-right: 0;
+    .case_info {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: inherit;
+        .form__checkbox {
+          margin-bottom: 8px;
+        }
+    }
   }
 
   .cases_block__item .left .case_name {
@@ -396,13 +463,29 @@
   }
 
   .cases_block__item .left .case_name__title {
-    font-size: 28px;
-    margin-bottom: 12px;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .light_theme .case_date, .light_theme .cases_block__item .left .case_name__date {
+    color: #363636;
+    font-size: 14px;
   }
 
   .form__checkbox {
     font-size: 11px;
     padding: 4px 12px;
+  }
+
+  .form__outter h2 {
+    width: 100%;
+    max-width: 80%;
+    margin-bottom: 32px;
+  }
+
+  .form_left p {
+    max-width: 100%;
+    font-size: 18px;
   }
 
   .form__checkbox_text {
@@ -411,6 +494,33 @@
 
   .form_right {
     max-width: 100%;
+  }
+
+  .light_theme .footer .footer__inner {
+    background-image: none;
+    padding-top: 20px !important;
+    border-top: 1px solid $color-black;
+  }
+
+  .menu_mobile__inner .menu_body .links_list .link_menu {
+    color: $color-black;
+  }
+
+  .hero_block__container.centered_ttl {
+    margin-bottom: 0;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    height: auto;
+    min-height: unset;
+      .maxi_h2 {
+        margin-bottom: 24px;
+        max-width: 100%;
+      }
+      p {
+        width: auto;
+        font-size: 18px;
+        max-width: 65%;
+      }
   }
 
 // основные
@@ -445,13 +555,11 @@
 
   .hero.desktop {
     margin-bottom: 60px;
-    .main_text__inner p {
-      max-width: 90%;
-    }
   }
 
   .hero_block__container img {
     margin-bottom: 30px !important;
+    width: 90%;
   }
 
   .hero.desktop .hero_services {
@@ -673,8 +781,8 @@
 
   .cases_block__item {
     flex-direction: row-reverse;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+    margin-bottom: 0;
+    padding: 20px 0;
     .left {
       width: 50%;
       margin-left: 0;
@@ -707,7 +815,7 @@
 
   .adv_block {
     margin-bottom: 40px;
-    padding:0 20px;
+    padding:0;
     .adv_block__item_p {
       font-size: 16px;
       max-width: 85%;
@@ -841,12 +949,13 @@
 
   .values_container {
     padding: 0;
+    margin-bottom: 20px;
     &__item {
       margin-bottom: 32px;
       width: 100%;
       margin-right: 0;
-      &:nth-child(2n) {
-        margin-right: 0;
+      &:first-child {
+        padding-top: 12px;
       }
       &_point {
         img {
@@ -855,11 +964,12 @@
       }
       .value_name {
         font-size: 24px;
-        margin-bottom: 20px;
+        margin-bottom: 12px;
       }
       .value_text {
-        font-size: 14px;
-        max-width: 90%;
+        font-size: 16px;
+        line-height: 20px;
+        max-width: 80%;
       }
     }
   }
@@ -889,14 +999,19 @@
   .adv_block {
     &__item {
       width: inherit;
-      max-width: 300px;
+      max-width: 270px;
         &_img {
           margin-bottom: 20px;
+          width: fit-content;
             svg {
               max-height: 70px;
             }
         }
     }
+  }
+
+  .light_theme .adv_block__item_img svg {
+    width: auto;
   }
 
   .burger {
@@ -1005,6 +1120,10 @@
 
 
 @media (max-width: 640px) {
+
+  .light_theme .hero_block__container {
+    height: 90vh;
+  }
 
   .header__inner .menu {
     margin-top: 0;
@@ -1181,7 +1300,72 @@
   }
 
   .page__item {
-    margin-bottom: 72px;
+    margin-bottom: 60px;
+  }
+
+  .aboutme {
+    margin-top: 0;
+  }
+  .btn {
+    line-height: 14px;
+  }
+
+  .team_block__item_box_info .name {
+    font-size: 16px;
+  }
+
+  .team_block__item .form__checkbox .form__checkbox_text {
+    font-size: 12px;
+  }
+
+  .team_block.slick-slider .slick-list, .news_block.slick-slider .slick-list {
+    margin-right: 0;
+  }
+
+  .news_block .team_block__item {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .slick-next {
+    right: 0;
+  }
+
+  .slick-prev {
+    right: 60px;
+  }
+
+  .light_theme .team_block__item_box_info .role {
+    font-size: 14px;
+  }
+
+  .team_body__inner_text .textframe {
+    margin-bottom: 24px;
+  }
+
+  .team_body__inner_text p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .form__outter h2 {
+    margin-top: 40px;
+    max-width: 100%;
+    font-size: 32px;
+    line-height: 34px;
+  }
+
+  .form_right .field_bar__items label {
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+
+  .form .form__checkbox {
+    padding: 5px 11px;
+  }
+
+  .form .form__checkbox_text {
+    font-size: 12px;
   }
 
   .services .left h2 {
@@ -1197,13 +1381,25 @@
     text-transform: none;
   }
 
+  .footer__inner .right .social {
+    margin-bottom: 14px;
+  }
+
+  .footer__inner .right .cr {
+    color: $color-black;
+  }
+
   .section_header {
     margin-bottom: 20px;
   }
 
   .section_header h2, .services .left h2 {
     font-size: 28px;
-    font-family: $font-family_deco;
+  }
+
+  .section_header h2.maxi_h2 {
+    font-size: 32px;
+    line-height: 34px;
   }
 
   .cases_block__item .left {
@@ -1212,6 +1408,10 @@
 
   .cases_block__item .left .case_text {
     max-width: 100%;
+  }
+
+  .values_container__item_text {
+    margin-top: 12px;
   }
 
   .adv_block {
@@ -1328,11 +1528,10 @@
     width: 100%;
   }
 
+
+
   .cases_block__item {
     flex-direction: column-reverse;
-    border-bottom: none;
-    margin-bottom: 32px;
-    padding-bottom: 0;
     .left {
       width: 100%;
       .case_works {
@@ -1354,6 +1553,7 @@
       }
     }
   }
+
 
   .cases_full, .form, .page__item.values, .aboutme {
     background-image: none;
@@ -1381,7 +1581,7 @@
   .cases_block__item .left .case_name {
     font-size: 18px;
     line-height: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
 
   .serv_block .cases_block__item {
@@ -1574,7 +1774,7 @@
   .cb {
     margin-bottom: 32px;
     .contacts_box {
-      flex-direction: column;
+      flex-wrap: wrap;
         &__item {
           margin-bottom: 12px;
           margin-right: 0;
@@ -1639,9 +1839,6 @@
   .team_block__item {
     width: 100%;
     margin-right: 0;
-      &:nth-child(3n+3) {
-        margin-right: 0;
-      }
   }
 
   .photo {
@@ -1684,9 +1881,7 @@
     margin-bottom: 50px;
   }
 
-  .news_block .team_block__item {
-    margin-bottom: 40px;
-  }
+
 
   .revert {
     .team_block__item {
@@ -1694,6 +1889,59 @@
         margin-bottom: 0;
       }
     }
+  }
+
+  .cases_header .link {
+    display: none;
+  }
+
+  .second_item .adv_block {
+    margin-bottom: 0;
+  }
+
+  .cases_block__item .left .case_tags {
+    margin-bottom: 20px;
+  }
+
+  .main_text.gb_animate {
+    opacity: 1;
+  }
+
+  .hero_block__container.centered_ttl p {
+    font-size: 14px;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .serv_block .cases_block__item .right {
+    color: $color-black;
+  }
+
+  .hero_block__container.centered_ttl {
+    .maxi_h2 {
+      font-size: 32px;
+      line-height: 36px;
+    }
+  }
+
+  .page__item.hero_block {
+    .maxi_h2 {
+      font-size: 32px;
+      line-height: 36px;
+    }
+  }
+
+  .righted_textblock {
+    justify-content: flex-start;
+  }
+
+  .righted_textblock p {
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+
+  .cb .contacts_box__item a {
+    color: $color-black;
   }
 
 }

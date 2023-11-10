@@ -1,14 +1,14 @@
 //стили чекбокса (label>input+span)
 
 .form__checkbox {
+
+  font-size: 12px;
   position: relative;
   display: inline-block;
+  margin-bottom: 12px;
+  padding: 5px 14px;
   vertical-align: top;
-  margin-bottom: 10px;
   cursor: pointer;
-  font-size: $font_default;
-
-  padding: 6px 18px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -55,11 +55,11 @@
 //стили отмеченного чекбокса
 .form__checkbox > input:checked ~ .form__checkbox_indicator {
   background: transparent;
-  border-color: $color-toad;
+  border-color: $color-fat-toad;
 }
 
 .form__checkbox > input:checked ~ .form__checkbox_text {
-  color: $color-toad;
+  color: $color-fat-toad;
 }
 
 //стили неотмеченного чекбокса

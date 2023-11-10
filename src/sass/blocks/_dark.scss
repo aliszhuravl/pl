@@ -1,26 +1,3 @@
-//cases
-
-  .cases_block {
-    &__item {
-      border-color: rgba(255, 255, 255, 0.11);
-
-      &:hover {
-        border-color: transparent;
-
-        &::after {
-          background-color: $color-toad;
-        }
-      }
-
-      .left {
-        .case_name {
-          &__title, &__date {
-            color: rgba(255, 255, 255, 1);
-          }
-        }
-      }
-    }
-  }
 
   //values
 
@@ -55,3 +32,204 @@
   .form_left a {
     color: $color-toad;
   }
+
+
+  // light theme
+
+.light_theme {
+  color: $color-black;
+  .page-container {
+    background-color: #fafafa;
+    position: relative;
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      background-image: url('../img/grad.png');
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+      pointer-events: none;
+    }
+  }
+  .page {
+    z-index: 1;
+  }
+  .header__inner .menu .logo svg path {
+    fill: $color-black;
+  }
+  .header__inner .menu .logo svg .st0:last-child {
+    fill: $color-toad;
+  }
+
+  .header__inner {
+    .menu {
+      background-image: none;
+    }
+    .menu_horizontal .list li .link_menu {
+      color: rgba(54, 54, 54, 0.70);
+    }
+  }
+
+  .hero_block__container {
+    padding: 0 1rem;
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    height: 80vh;
+  }
+
+  .hero.desktop .main_text {
+    margin-top: 40px;
+  }
+
+  .btn {
+    color: $color-black;
+    border-color: $color-black;
+  }
+  .hero.desktop .main_text .main_links a img {
+    filter: invert(0.7);
+  }
+
+  .adv_block__item_img svg {
+    filter: invert(0.8);
+  }
+
+  .cases_full, .page__item.values, .aboutme, .form {
+    background-image: none;
+  }
+
+  .form__checkbox_indicator {
+    border-color: $color-black;
+  }
+  .form__checkbox_text {
+    color: $color-black;
+  }
+  .cases_block__item .left .case_name__title {
+    color: $color-black;
+  }
+  .case_date, .cases_block__item .left .case_name__date {
+    color: $color-black;
+  }
+
+  .values_container__item_text .value_text {
+    color: rgba(54, 54, 54, 0.6);
+  }
+
+  .values_container__item_point svg path {
+    fill: $color-black;
+  }
+  .values_container__item:hover svg path {
+    fill: #93f8bb;
+  }
+  .cases_header .link, .cases_header .nav__link {
+    color: $color-black;
+  }
+  .cases_block__item {
+    border-color: rgba(54, 54, 54, 0.50);
+  }
+  .team_block__item {
+    border-color: rgba(54, 54, 54, 0.50);
+  }
+  .link {
+    color: $color-black;
+  }
+  .team_block__item_box_info .role {
+    color: rgba(54, 54, 54, 0.6);
+  }
+  .slick-next, .slick-prev {
+    filter: invert(1);
+  }
+
+  .form__item, .form__textarea {
+    color: rgba(54, 54, 54, 1);
+    border-color: rgba(54, 54, 54, 0.50);
+    &::-webkit-input-placeholder {  color: rgba(54, 54, 54, 0.40); transition: color .3s;}
+    &::-moz-placeholder          {  color: rgba(54, 54, 54, 0.40); transition: color .3s;}
+
+    &:focus::-webkit-input-placeholder {color: transparent; transition: all .3s;}
+    &:focus::-moz-placeholder          {color: transparent; transition: all .3s;}
+  }
+
+  .footer {
+    background-color: #fafafa;
+    .footer__inner {
+      background-image: url('../img/line-black.svg');
+    }
+    .footer__inner .right .social a.link, .footer__inner .right .social a.nav__link {
+      color: rgba(54, 54, 54, 1);
+    }
+  }
+
+  .serv_block .cases_block__item .left .case_info .case_name {
+    color: rgba(54, 54, 54, 1);
+  }
+  .serv_block .cases_block__item .left .case_info .case_text {
+    color: rgba(54, 54, 54, 0.7);
+  }
+
+  .link_active {
+    color: $color-fat-toad !important;
+  }
+
+  .link.link_menu {
+    &:hover {
+      color: $color-fat-toad !important;
+    }
+  }
+
+  .cases_header .link, .cases_header .nav__link {
+    &:hover {
+      color: $color-fat-toad !important;
+    }
+  }
+
+  .cases_block__item .left .case_name__date span.point {
+    background-color: #363636;
+  }
+
+  .img_container {
+    position: relative;
+    svg {
+      width: 100%;
+        path {
+          fill: $color-black;
+        }
+    }
+  }
+
+  .news_block .team_block__item:hover {
+    color: rgba(54, 54, 54, 1);
+      .date {
+        color: rgba(54, 54, 54, 0.9);
+      }
+  }
+
+  .case_page .hero_case .back a img {
+    filter: invert(1);
+  }
+
+  .page-member .hero_block__container {
+    height: auto;
+  }
+
+  .case-page {
+    .hero_block__container {
+      height: auto;
+    }
+    .case_tags {
+      position: static;
+      max-width: 100%;
+    }
+    .case_body__slider {
+      margin-bottom: 0;
+    }
+  }
+
+}

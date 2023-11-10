@@ -38,8 +38,8 @@
   background-repeat: no-repeat;
   -webkit-background-size: contain;
   background-size: contain;
-  height: 32px;
-  width: 32px;
+  width: 24px;
+  height: 24px;
   transition: all 0.2s;
 }
 .slick-prev {
@@ -48,8 +48,8 @@
   background-repeat: no-repeat;
   -webkit-background-size: contain;
   background-size: contain;
-  height: 32px;
-  width: 32px;
+  width: 24px;
+  height: 24px;
   transition: all 0.2s;
 }
 .slick-prev:hover,
@@ -61,7 +61,7 @@
 
 .slick-prev
 {
-  bottom: 0;
+  bottom: -24px;
   right: 100px;
 }
 [dir='rtl'] .slick-prev
@@ -72,7 +72,7 @@
 
 .slick-next
 {
-  bottom: 0;
+  bottom: -24px;
   right: 24px;
 }
 [dir='rtl'] .slick-next

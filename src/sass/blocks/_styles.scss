@@ -102,6 +102,16 @@ li.animated-button.thar-three:before {
   }
 }
 
+.hero_block__container {
+  padding: 0 32px;
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  height: 80vh;
+}
+
 //aboutme
 
 .aboutme {
@@ -154,7 +164,7 @@ li.animated-button.thar-three:before {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  background-color: #1E1E1E;
+  background-color: #fafafa;
   background-image: url('../img/noise.png');
   background-blend-mode: overlay;
   visibility: hidden;
@@ -235,8 +245,6 @@ li.animated-button.thar-three:before {
     width: 100%;
     .back {
       margin-right: 50px;
-      width: 45%;
-      max-width: 420px;
       overflow: hidden;
         a {
           overflow: hidden;
@@ -257,9 +265,10 @@ li.animated-button.thar-three:before {
       justify-content: flex-start;
       align-items: flex-start;
       flex-direction: column;
+
         .case_title {
-          font-family: $font-family_deco;
-          font-weight: normal;
+          font-family: $font-family-unbounded;
+          font-weight: 300;
           letter-spacing: 1px;
           font-size: calc(32px + (54 - 32) * ((100vw - 375px) / (1920 - 375)));
           text-align: left;
@@ -443,15 +452,35 @@ li.animated-button.thar-three:before {
 }
 
 .hero_block__container.centered_ttl {
+  height: auto !important;
   padding: 0;
-  justify-content: center;
-    img {
-      padding: 0;
-      margin-bottom: 0 !important;
-    }
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 60px;
+  .maxi_h2 {
+    width: 100%;
+    max-width: 65%;
+    margin-right: 60px;
+  }
+  p {
+    width: 24%;
+    max-width: 340px;
+  }
 }
 
 .case_tags {
   position: absolute;
   max-width: 30%;
+}
+
+.righted_textblock {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+    p {
+      max-width: 360px;
+      min-width: 320px;
+    }
 }

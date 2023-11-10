@@ -4,7 +4,7 @@
     //= html/_head.html
     <title>Моё портфолио</title>
 </head>
-<body>
+<body class="light_theme">
 <div class="page-container page-subpage">
     //= html/_header.html
     //= html/_menu.html
@@ -12,12 +12,16 @@
         <div class="page__inner">
             <section class="page__item hero_block">
                 <div class="hero_block__container centered_ttl">
-                    <img class="hero_subpage_img" src="img/port.svg" alt="">
+                   <h2 class="maxi_h2">проекты, которыми
+                       мы гордимся</h2>
+                    <p>Мы — креативная команда дизайнеров
+                        и разработчиков, сфокусированных на создании продуманных,
+                        функциональных и, конечно же,  красивых решений.</p>
                 </div>
             </section>
             <section class="page__item">
                 <div class="cases_block">
-                    <div class="cases_block__item gb_animate">
+                    <a class="cases_block__item gb_animate" href="#">
                         <div class="left">
                             <div class="case_info">
                                 <div class="case_tags">
@@ -48,15 +52,16 @@
                                     </label>
                                 </div>
                                 <div class="case_name">
-                                    <p class="case_name__title">Брянский лес</p>
-                                    <p class="case_name__date">2023</p>
+                                    <p class="case_name__title">Цвет'ok</p>
+                                    <p class="case_name__date"><span class="bold_date">Июль 2023</span> <span class="point"></span>магазин флористики</p>
                                 </div>
                             </div>
                         </div>
                         <div class="right">
                             <img src="img/case.png" alt="#" class="case_img_cover bigger_animate">
                         </div>
-                    </div>
+                    </a>
+
                     <a class="cases_block__item gb_animate"  href="https://www.behance.net/gallery/158853231/Photographers-Portfolio-Website-UIUX" target="_blank">
                         <div class="left">
                             <div class="case_info">
@@ -74,7 +79,7 @@
                                 </div>
                                 <div class="case_name">
                                     <p class="case_name__title">Сайт фотографа</p>
-                                    <p class="case_name__date">2023</p>
+                                    <p class="case_name__date"><span class="bold_date">Июль 2023</span> <span class="point"></span> что-то ещё</p>
                                 </div>
                             </div>
                         </div>
@@ -98,8 +103,8 @@
                                     </label>
                                 </div>
                                 <div class="case_name">
-                                    <p class="case_name__title">Kommune DAO</p>
-                                    <p class="case_name__date">2023</p>
+                                    <p class="case_name__title">Единый портал подготовки к аттестации</p>
+                                    <p class="case_name__date"><span class="bold_date">Июль 2023</span> <span class="point"></span> что-то ещё</p>
                                 </div>
                             </div>
 
@@ -125,13 +130,13 @@
                                 </div>
                                 <div class="case_name">
                                     <p class="case_name__title">Kommune DAO</p>
-                                    <p class="case_name__date">2023</p>
+                                    <p class="case_name__date"><span class="bold_date">Июль 2023</span> <span class="point"></span> что-то ещё</p>
                                 </div>
                             </div>
 
                         </div>
                         <div class="right">
-                            <img src="img/case_010.png" alt="#" class="case_img_cover bigger_animate">
+                            <img src="img/case_012.png" alt="#" class="case_img_cover bigger_animate">
                         </div>
                     </a>
                     <a class="cases_block__item gb_animate" href="https://www.behance.net/gallery/156038773/Business-and-Finance-Corporate-Website-UI-UX" target="_blank">
@@ -151,7 +156,7 @@
                                 </div>
                                 <div class="case_name">
                                     <p class="case_name__title">Kommune DAO</p>
-                                    <p class="case_name__date">2023</p>
+                                    <p class="case_name__date"><span class="bold_date">Июль 2023</span> <span class="point"></span> что-то ещё</p>
                                 </div>
                             </div>
 
@@ -169,6 +174,7 @@
             </section>
 
             //= html/_form.html
+            //= html/_switcher.html
         </div>
     </main>
     //= html/_footer.html

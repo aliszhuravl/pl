@@ -1,7 +1,7 @@
 .btn {
   position: relative;
   vertical-align: top;
-  height: 48px;
+  height: 40px;
   padding: 6px 20px;
   border-radius: 50px;
   font-size: calc(14px + (18 - 14) * ((100vw - 1280px) / (1920 - 1280)));
@@ -44,6 +44,7 @@
 
 .theme-button {
   background-color: #363636;
+  z-index: 3;
   align-items: flex-start;
   padding-top: 10px;
   position: fixed;

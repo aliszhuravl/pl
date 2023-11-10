@@ -1,3 +1,7 @@
+.page {
+  position: relative;
+}
+
 .page-container {
   display: flex;
   flex-direction: column;
@@ -12,6 +16,21 @@
   background-color: #1E1E1E;
   background-image: url('../img/noise.png');
   background-blend-mode: overlay;
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    background-image: url('../img/grad.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    pointer-events: none;
+  }
 }
 
 .page {
@@ -24,6 +43,7 @@
   @extend .layout-inner;
   display: flex;
   flex-direction: column;
+  z-index: 1;
   flex-grow: 1;
   background-color: transparent;
 }
@@ -40,35 +60,31 @@
   flex-direction: row;
   .right {
     position: relative;
-      .case_img_back {
-        position: absolute;
-        visibility: hidden;
-        opacity: 0;
-        top: 0;
-        left: 0;
-        transition: all 0.3s;
+    overflow-y: hidden;
+      img {
+        display: block;
       }
-  }
-  .case_img_cover {
-    visibility: visible;
-  }
-  .case_img_back {
-    visibility: hidden;
-  }
-  &:hover {
-    border-color:  $color-toad;
     &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(31, 31, 31, 0.40);
+      background-image: url('../img/more.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      content: '';
       width: 100%;
+      height: 100%;
+      opacity: 0;
+      visibility: hidden;
       transition: all 0.3s;
     }
+  }
+  &:hover {
     .right {
-      position: relative;
-      .case_img_back {
-        position: absolute;
-        visibility: visible;
+      &:after {
         opacity: 1;
-        top: 0;
-        left: 0;
+        visibility: visible;
         transition: all 0.3s;
       }
     }
@@ -109,7 +125,8 @@
             text-transform: none;
             font-size: calc(24px + (30 - 24) * ((100vw - 1199px) / (1920 - 1199)));
             line-height: calc(29px + (35 - 29) * ((100vw - 1199px) / (1920 - 1199)));
-            font-family: $font-family_deco;
+            font-family: $font-family_unbounded;
+            font-weight: 300;
           }
         .case_text {
           width: 40%;
@@ -130,8 +147,8 @@
 }
 
 .values_container__item_point {
+  margin-right: 32px;
   img {
     max-height: 45px;
-
   }
 }

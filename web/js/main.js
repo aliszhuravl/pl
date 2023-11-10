@@ -151,7 +151,7 @@ $(document).ready(function(){
 });
 $(document).ready(function() {
     $(".theme-button").click(function () {
-        $('body').toggleClass('change_theme');
+        $('body').toggleClass('light_theme');
     });
 });
 $(document).ready(function() {
@@ -170,6 +170,28 @@ $(document).ready(function() {
     });
 
     $('.news_block').slick({
+        dots: false,
+        infinite: true,
+        cssEase:'linear',
+        slidesToShow: 4,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+    $('.team_slider').slick({
         dots: false,
         infinite: true,
         cssEase:'linear',
