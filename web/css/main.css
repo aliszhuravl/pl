@@ -1205,9 +1205,9 @@ h3 {
 	opacity: .6;
 }
 
-.serv_block .cases_block__item:hover .right img {
-	transition: all .2s;
-	transform: rotate(45deg);
+.serv_block .cases_block__item:hover .right:after {
+	visibility: hidden;
+	opacity: 0;
 }
 
 .values_container__item_point {

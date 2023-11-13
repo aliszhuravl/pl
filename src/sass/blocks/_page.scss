@@ -137,9 +137,9 @@
     }
     &:hover {
       .right {
-        img {
-          transition: all 0.2s;
-          transform: rotate(45deg);
+        &:after {
+          visibility: hidden;
+          opacity: 0;
         }
       }
     }
