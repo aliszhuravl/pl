@@ -305,6 +305,16 @@
 
 @media (max-width: 1199px) {
 
+  .hero_block__container {
+    padding: 0;
+  }
+
+  // panel
+
+  .panel {
+    display: flex;
+  }
+
   // fone
 
   .light_theme .page-container:after {
@@ -467,8 +477,7 @@
     margin-bottom: 20px;
   }
 
-  .light_theme .case_date, .light_theme .cases_block__item .left .case_name__date {
-    color: #363636;
+  .case_date, .cases_block__item .left .case_name__date {
     font-size: 14px;
   }
 
@@ -496,14 +505,14 @@
     max-width: 100%;
   }
 
-  .light_theme .footer .footer__inner {
+  .footer .footer__inner {
     background-image: none;
     padding-top: 20px !important;
     border-top: 1px solid $color-black;
   }
 
   .menu_mobile__inner .menu_body .links_list .link_menu {
-    color: $color-black;
+    color: #fff;
   }
 
   .hero_block__container.centered_ttl {
@@ -1116,6 +1125,73 @@
     position: static;
     max-width: 100%;
   }
+
+  .team_block__item_box_info .name {
+    font-size: 16px;
+  }
+
+  .team_block__item_box_info .role {
+    font-size: 14px;
+  }
+
+
+  // dark theme
+
+  .hero_block__container {
+    height: 95vh;
+    padding: 0;
+  }
+
+  .hero_block__container img  {
+    filter: invert(1);
+  }
+
+  .hero.desktop .main_text .main_links a img {
+    filter: invert(0);
+  }
+
+  .footer {
+    padding-bottom: 45px;
+  }
+
+  //light theme
+
+  .light_theme {
+    .hero_block__container img  {
+      filter: invert(0);
+    }
+    .hero.desktop .main_text .main_links a img {
+      filter: invert(0.7);
+    }
+    .case_date, .cases_block__item .left .case_name__date {
+      color: $color-black;
+    }
+    .hamburger__item, .hamburger span:before, .hamburger span:after, .hamburger span {
+      background-color: $color-black;
+    }
+    .hamburger span {
+      background-color: transparent;
+    }
+    .menu_mobile__inner .menu_body .links_list .link_menu {
+      color: $color-black;
+    }
+    .panel {
+      background-color: #fff;
+        img {
+          filter: invert(0);
+        }
+      .theme-switcher__inner span.line {
+        background-color: $color-black;
+      }
+    }
+  }
+
+  .page-member {
+    .hero_block__container img  {
+      filter: invert(0);
+    }
+  }
+
 }
 
 
@@ -1386,6 +1462,10 @@
   }
 
   .footer__inner .right .cr {
+    color: #fff;
+  }
+
+  .light_theme .footer__inner .right .cr {
     color: $color-black;
   }
 
@@ -1567,6 +1647,7 @@
 
   .footer {
     padding: 0 1.2rem;
+    padding-bottom: 45px;
       &__inner {
         flex-direction: column-reverse;
         .left {
@@ -1941,6 +2022,10 @@
   }
 
   .cb .contacts_box__item a {
+    color: #fff;
+  }
+
+  .light_theme .cb .contacts_box__item a {
     color: $color-black;
   }
 

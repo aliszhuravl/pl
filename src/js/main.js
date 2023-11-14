@@ -9,3 +9,4 @@
 //= parts/_watch.js
 //= parts/_slick.js
 //= parts/_follow.js
+//= parts/_panel.js

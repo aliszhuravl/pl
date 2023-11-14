@@ -1549,6 +1549,16 @@ h3 {
 	opacity: 1;
 }
 
+.delete {
+	position: relative;
+	border: none;
+	background-color: transparent;
+}
+
+.delete:hover {
+	opacity: .5;
+}
+
 .form__checkbox {
 	font-size: 12px;
 	position: relative;
@@ -2733,7 +2743,7 @@ li.animated-button.thar-three:before {
 	height: 2px;
 	transition: all .25s ease-out;
 	border-radius: 3px;
-	background: #363636;
+	background: #fff;
 }
 
 .hamburger span {
@@ -3338,7 +3348,7 @@ li.animated-button.thar-three:before {
 }
 
 .case-page .case_body__slider {
-	margin-bottom: 80px;
+	margin-bottom: 20px;
 }
 
 .slick-slider {
@@ -3713,7 +3723,157 @@ li.animated-button.thar-three:before {
 }
 
 .light_theme .case-page .case_body__slider {
-	margin-bottom: 0;
+	margin-bottom: 20px;
+}
+
+.panel {
+	position: fixed;
+	z-index: 5;
+	bottom: 0;
+	left: 0;
+	display: none;
+	visibility: hidden;
+	width: 100%;
+	height: 45px;
+	transition: all .2s ease-out;
+	transform: translateY(20%);
+	opacity: 0;
+	border-top: 1px solid #363636;
+	background-color: #1e1e1e;
+	background-image: url('../img/noise.png');
+	background-repeat: repeat;
+	box-shadow: 3px -4px 16px rgba(85, 87, 69, .12);
+	justify-content: flex-start;
+	align-items: stretch;
+	background-blend-mode: overlay;
+}
+
+.panel__inner {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	padding: 0 16px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.panel_item {
+	position: relative;
+	display: flex;
+	width: auto;
+	height: 100%;
+	text-decoration: none;
+	align-items: center;
+	justify-content: center;
+}
+
+.panel_item:last-of-type {
+	border-right: 0;
+}
+
+.panel_item img {
+	filter: invert(1);
+}
+
+.panel_item .theme-switcher__inner span.line {
+	background-color: #fff;
+}
+
+.panel_open {
+	visibility: visible;
+	transition: all .2s ease-out;
+	transform: translateY(0%);
+	opacity: 1;
+}
+
+.panel_search {
+	position: absolute;
+	z-index: 8;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	visibility: hidden;
+	width: 100%;
+	height: 100%;
+	transition: all .2s ease-out;
+	opacity: 0;
+	background-color: #fff;
+	align-items: stretch;
+	justify-content: flex-start;
+}
+
+.panel_search .form__search {
+	font-size: 14px;
+	width: 100%;
+	height: 100%;
+	padding: 0 20px;
+	border: 0;
+	border-radius: 0;
+	outline: none;
+	background-color: #fff;
+	box-shadow: none;
+}
+
+.panel_search .form__search:focus::-webkit-input-placeholder {
+	-webkit-transition: color .3s;
+	transition: color .3s;
+	color: transparent;
+}
+
+.panel_search .form__search:focus::-moz-placeholder {
+	-moz-transition: color .3s;
+	transition: color .3s;
+	color: transparent;
+}
+
+.panel_search .close_search {
+	display: flex;
+	height: 100%;
+	padding: 0 20px;
+	align-items: center;
+	justify-content: center;
+}
+
+.panel_search .close_search img {
+	width: 14px;
+	height: 14px;
+}
+
+.ps_opened {
+	display: flex;
+	visibility: visible;
+	transition: all .2s ease-out;
+	opacity: 1;
+}
+
+.theme-switcher {
+	width: 50%;
+	max-width: 160px;
+}
+
+.theme-switcher__inner {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.theme-switcher__inner .sun {
+	width: 26px;
+	height: 26px;
+	max-height: 26px;
+}
+
+.theme-switcher__inner .moon {
+	max-height: 22px;
+}
+
+.theme-switcher__inner span.line {
+	width: 100%;
+	height: 1px;
+	margin: 0 12px;
+	content: '';
+	background-color: #363636;
 }
 
 .clearfix:before,
@@ -4022,6 +4182,14 @@ li.animated-button.thar-three:before {
 
 @media (max-width: 1199px) {
 
+.hero_block__container {
+	padding: 0;
+}
+
+.panel {
+	display: flex;
+}
+
 .light_theme .page-container:after {
 	background-position: bottom;
 }
@@ -4185,10 +4353,9 @@ li.animated-button.thar-three:before {
 	margin-bottom: 20px;
 }
 
-.light_theme .case_date,
-.light_theme .cases_block__item .left .case_name__date {
+.case_date,
+.cases_block__item .left .case_name__date {
 	font-size: 14px;
-	color: #363636;
 }
 
 .form__checkbox {
@@ -4215,14 +4382,14 @@ li.animated-button.thar-three:before {
 	max-width: 100%;
 }
 
-.light_theme .footer .footer__inner {
+.footer .footer__inner {
 	padding-top: 20px !important;
 	border-top: 1px solid #363636;
 	background-image: none;
 }
 
 .menu_mobile__inner .menu_body .links_list .link_menu {
-	color: #363636;
+	color: #fff;
 }
 
 .hero_block__container.centered_ttl {
@@ -4868,6 +5035,78 @@ li.animated-button.thar-three:before {
 	max-width: 100%;
 }
 
+.team_block__item_box_info .name {
+	font-size: 16px;
+}
+
+.team_block__item_box_info .role {
+	font-size: 14px;
+}
+
+.hero_block__container {
+	height: 95vh;
+	padding: 0;
+}
+
+.hero_block__container img {
+	filter: invert(1);
+}
+
+.hero.desktop .main_text .main_links a img {
+	filter: invert(0);
+}
+
+.footer {
+	padding-bottom: 45px;
+}
+
+.light_theme .hero_block__container img {
+	filter: invert(0);
+}
+
+.light_theme .hero.desktop .main_text .main_links a img {
+	filter: invert(.7);
+}
+
+.light_theme .case_date,
+.light_theme .cases_block__item .left .case_name__date {
+	color: #363636;
+}
+
+.light_theme .hamburger__item,
+.hamburger .light_theme span:before,
+.hamburger .light_theme span:after,
+.hamburger .light_theme span,
+.light_theme .hamburger span:before,
+.light_theme .hamburger span:after,
+.light_theme .hamburger span {
+	background-color: #363636;
+}
+
+.light_theme .hamburger span {
+	background-color: transparent;
+}
+
+.light_theme .menu_mobile__inner .menu_body .links_list .link_menu {
+	color: #363636;
+}
+
+.light_theme .panel {
+	background-color: #fff;
+}
+
+.light_theme .panel img {
+	filter: invert(0);
+}
+
+.light_theme .panel .theme-switcher__inner span.line {
+	background-color: #363636;
+}
+
+.page-member .hero_block__container img {
+	filter: invert(0);
+}
+
 }
 
 @media (max-width: 640px) {
@@ -5146,6 +5385,10 @@ li.animated-button.thar-three:before {
 }
 
 .footer__inner .right .cr {
+	color: #fff;
+}
+
+.light_theme .footer__inner .right .cr {
 	color: #363636;
 }
 
@@ -5344,6 +5587,7 @@ li.animated-button.thar-three:before {
 
 .footer {
 	padding: 0 1.2rem;
+	padding-bottom: 45px;
 }
 
 .footer__inner {
@@ -5722,6 +5966,10 @@ li.animated-button.thar-three:before {
 }
 
 .cb .contacts_box__item a {
+	color: #fff;
+}
+
+.light_theme .cb .contacts_box__item a {
 	color: #363636;
 }
 
