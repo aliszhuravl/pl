@@ -16,10 +16,9 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 5;
+  z-index: 8;
 
-  border-top: 1px solid $color-black;
-  box-shadow: 3px -4px 16px rgba(85, 87, 69, 0.12);
+  border-top: 1px solid rgba(54, 54, 54, .5);
     &__inner {
       display: flex;
       align-items: center;

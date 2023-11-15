@@ -936,6 +936,7 @@ h3 {
 }
 
 .header {
+	z-index: 2;
 	margin-bottom: 20px;
 	padding: 0 0 12px 0;
 	background-color: transparent;
@@ -1096,6 +1097,7 @@ h3 {
 	pointer-events: none;
 	background-image: url('../img/grad.png');
 	background-repeat: no-repeat;
+	background-position: -70px;
 	background-size: cover;
 }
 
@@ -2794,7 +2796,7 @@ li.animated-button.thar-three:before {
 
 .menu_wrapper {
 	position: fixed;
-	z-index: 8;
+	z-index: 7;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -2827,6 +2829,7 @@ li.animated-button.thar-three:before {
 	position: relative;
 	z-index: 11;
 	height: 100%;
+	padding-top: 40px;
 }
 
 .menu_mobile__inner .menu_body {
@@ -3728,7 +3731,7 @@ li.animated-button.thar-three:before {
 
 .panel {
 	position: fixed;
-	z-index: 5;
+	z-index: 8;
 	bottom: 0;
 	left: 0;
 	display: none;
@@ -3738,11 +3741,10 @@ li.animated-button.thar-three:before {
 	transition: all .2s ease-out;
 	transform: translateY(20%);
 	opacity: 0;
-	border-top: 1px solid #363636;
+	border-top: 1px solid rgba(54, 54, 54, .5);
 	background-color: #1e1e1e;
 	background-image: url('../img/noise.png');
 	background-repeat: repeat;
-	box-shadow: 3px -4px 16px rgba(85, 87, 69, .12);
 	justify-content: flex-start;
 	align-items: stretch;
 	background-blend-mode: overlay;
@@ -4184,6 +4186,24 @@ li.animated-button.thar-three:before {
 
 .hero_block__container {
 	padding: 0;
+}
+
+.header {
+	position: sticky;
+	z-index: 8;
+	top: -1px;
+	border-bottom: 1px solid rgba(54, 54, 54, .5);
+	background-color: #1e1e1e;
+	background-image: url('../img/noise.png');
+	background-repeat: repeat;
+	justify-content: flex-start;
+	align-items: stretch;
+	background-blend-mode: overlay;
+}
+
+.light_theme .header {
+	border-bottom: 1px solid rgba(54, 54, 54, .5) !important;
+	background-color: #fafafa;
 }
 
 .panel {

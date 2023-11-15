@@ -6,7 +6,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 8;
+  z-index: 7;
   height: 100vh;
   width: 100%;
   overflow-y: auto;
@@ -30,6 +30,7 @@
     position: relative;
     z-index: 11;
     height: 100%;
+    padding-top: 40px;
     .menu_body {
       padding: 40px 0;
       overflow-y: auto;
