@@ -1,25 +1,20 @@
 .footer {
-  background-color: #1E1E1E;
-  background-image: url('../img/noise.png');
-  background-blend-mode: overlay;
+  background: transparent;
   width: 100%;
   padding: 0 3rem;
   border: 0;
+  z-index: 1;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .footer__inner {
+  padding-top: 20px;
   width: 100%;
   display: flex;
   align-items:flex-start;
   justify-content: space-between;
-  background-image: url('../img/line.svg');
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  -webkit-background-size:contain;
-  background-size: contain;
   flex-direction: row-reverse;
-  padding: 1%;
-
+  padding-bottom: 20px;
     .left {
         img {
           max-width: 160px;
