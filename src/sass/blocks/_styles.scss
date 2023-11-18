@@ -382,6 +382,10 @@ li.animated-button.thar-three:before {
   &__slide {
     padding: 12px;
     opacity: 0.6;
+    max-width: 900px;
+      img {
+        width: 100%;
+      }
   }
   .case_slider__slide.slick-active {
     animation: fadeInUp 1s both;

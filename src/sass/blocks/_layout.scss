@@ -291,6 +291,11 @@
 //маленький десктоп
 
 @media (max-width: 1300px) and (min-width: 1200px) {
+
+  .case_slider__slide {
+    max-width: 650px;
+  }
+
   .page__inner, .footer {
     padding: 0 2rem;
   }

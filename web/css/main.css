@@ -2031,8 +2031,13 @@ li.animated-button.thar-three:before {
 }
 
 .case_slider__slide {
+	max-width: 900px;
 	padding: 12px;
 	opacity: .6;
+}
+
+.case_slider__slide img {
+	width: 100%;
 }
 
 .case_slider .case_slider__slide.slick-active {
@@ -4158,6 +4163,10 @@ li.animated-button.thar-three:before {
 }
 
 @media (max-width: 1300px) and (min-width: 1200px) {
+
+.case_slider__slide {
+	max-width: 650px;
+}
 
 .page__inner,
 .footer {
