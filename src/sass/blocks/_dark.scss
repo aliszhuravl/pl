@@ -160,12 +160,17 @@
 
   .footer {
     background-color: transparent;
+    border-color: rgba(54, 54, 54, 1);
     .footer__inner {
-      background-image: url('../img/line-black.svg');
+      background-image: none;
     }
     .footer__inner .right .social a.link, .footer__inner .right .social a.nav__link {
       color: rgba(54, 54, 54, 1);
     }
+  }
+
+  .footer__inner .right .cr {
+    color: rgba(54, 54, 54, 0.50);
   }
 
   .serv_block .cases_block__item .left .case_info .case_name {

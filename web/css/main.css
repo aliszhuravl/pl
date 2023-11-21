@@ -3683,16 +3683,21 @@ li.animated-button.thar-three:before {
 }
 
 .light_theme .footer {
+	border-color: rgb(54, 54, 54);
 	background-color: transparent;
 }
 
 .light_theme .footer .footer__inner {
-	background-image: url('../img/line-black.svg');
+	background-image: none;
 }
 
 .light_theme .footer .footer__inner .right .social a.link,
 .light_theme .footer .footer__inner .right .social a.nav__link {
 	color: rgb(54, 54, 54);
+}
+
+.light_theme .footer__inner .right .cr {
+	color: rgba(54, 54, 54, .5);
 }
 
 .light_theme .serv_block .cases_block__item .left .case_info .case_name {
