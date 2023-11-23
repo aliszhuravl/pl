@@ -1807,7 +1807,7 @@ li.animated-button.thar-three:before {
 	transition: all .3s ease-in;
 	pointer-events: none;
 	opacity: 0;
-	background-color: #fafafa;
+	background-color: #363636;
 	background-image: url('../img/noise.png');
 	align-items: center;
 	justify-content: center;
@@ -1828,6 +1828,10 @@ li.animated-button.thar-three:before {
 	width: 0;
 	height: 4px;
 	background-color: #93f8bb;
+}
+
+.light_theme .preloader {
+	background-color: #fafafa;
 }
 
 .gb_animate,
