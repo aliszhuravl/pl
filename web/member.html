@@ -3,6 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=77dc28d4-690d-41be-8dc9-157768aa7e38&lang=ru_RU" type="text/javascript"></script>
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Черный парень</title>
@@ -237,6 +238,55 @@
 <script>window.jQuery || document.write('<script src="js/libs/jquery/jquery-3.1.1.min.js"><\/script>')</script>
 <script src="js/libs/jquery.viewportchecker.min.js"></script>
 <script src="js/libs/jquery.slick/slick.min.js"></script>
+<script type="text/javascript">
+    ymaps.ready(init);
+
+    function init() {
+        var myMap = new ymaps.Map("map", {
+                center: [61.844539, 34.411282],
+                zoom: 14
+            }),
+
+            // Создаем геообъект с типом геометрии "Точка".
+            myGeoObject = new ymaps.GeoObject({
+                // Описание геометрии.
+                geometry: {
+                    type: "Point",
+                    coordinates: [61.844539, 34.411282]
+                },
+                // Свойства.
+                properties: {
+                    // Контент метки.
+                    iconContent: '',
+                    balloonContent: 'Видовой офис класса АА+'
+                }
+            }, {
+                // Опции.
+                // Иконка метки будет растягиваться под размер ее содержимого.
+                preset: 'twirl#redStretchyIcon',
+                // Метку можно перемещать.
+                draggable: true
+            }),
+
+            // Создаем метку с помощью вспомогательного класса.
+            myPlacemark1 = new ymaps.Placemark([61.844539, 34.411282], {
+                // Свойства.
+                // Содержимое иконки, балуна и хинта.
+                iconContent: '1',
+                balloonContent: 'Балун',
+                hintContent: 'Стандартный значок метки'
+            }, {
+                // Опции.
+                // Стандартная фиолетовая иконка.
+                preset: 'twirl#violetIcon'
+            });
+
+        //myMap.controls.add('smallZoomControl');
+        // Добавляем все метки на карту.
+        myMap.geoObjects.add(myPlacemark1)
+            .add(myGeoObject);
+    }
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>

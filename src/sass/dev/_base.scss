@@ -25,10 +25,22 @@ body {
 }
 
 a {
+  text-decoration: none;
+  color: #fff;
   transition: color, .2s;
-  
+  font-size: calc(13px + (18 - 13) * ((100vw - 375px) / (1920 - 375)));
   &:hover {
     text-decoration: none;
+    color: $color-toad;
+  }
+}
+
+.light_theme {
+  a {
+    color: $color-black;
+    &:hover {
+      color: $color-fat-toad;
+    }
   }
 }
 

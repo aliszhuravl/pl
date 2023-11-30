@@ -177,3 +177,47 @@ video.aurora, .aurora_light {
     max-height: 45px;
   }
 }
+
+.map {
+  background-color: #fff;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  .map_box {
+    height: 400px;
+    width: 100%;
+    display: block;
+  }
+  .page__item {
+    position: absolute;
+    margin-bottom: 0;
+    top: 15%;
+    right: 2%;
+      .map_window {
+        position: relative;
+        border-radius: 40px;
+        background-color: #fff;
+        color: $color-black;
+        padding: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        max-width: 440px;
+        box-shadow: 3px 5px 1px $color-toad;
+        border: 1px solid $color-black;
+          .office {
+            width: 140px;
+            min-width: 140px;
+            height: 140px;
+            margin-right: 24px;
+              img {
+                width: 100%;
+              }
+          }
+      }
+  }
+}
+
+.ymaps-2-1-79-map-copyrights-promo, .ymaps-2-1-79-copyright__wrap {
+  display: none !important;
+}
