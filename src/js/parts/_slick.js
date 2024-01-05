@@ -13,7 +13,7 @@ $(document).ready(function() {
         variableWidth: true
     });
 
-    $('.news_block').slick({
+    $('.news_slider').slick({
         dots: false,
         infinite: true,
         cssEase:'linear',

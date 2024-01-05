@@ -167,6 +167,12 @@ video.aurora, .aurora_light {
           opacity: 0;
         }
       }
+      .left {
+        .case_name {
+          color: $color-fat-toad !important;
+          transition: all 0.3s;
+        }
+      }
     }
   }
 }
@@ -220,4 +226,10 @@ video.aurora, .aurora_light {
 
 .ymaps-2-1-79-map-copyrights-promo, .ymaps-2-1-79-copyright__wrap {
   display: none !important;
+}
+
+.service_price {
+  font-family: $font-family_unbounded;
+  margin-bottom: 20px;
+
 }

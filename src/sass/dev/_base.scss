@@ -78,3 +78,14 @@ h3 {
   font-family: $font-family_unbounded;
   max-width: 80%;
 }
+
+.article_h1 {
+  font-size: calc(54px + (72 - 54) * ((100vw - 1199px) / (1920 - 1199)));
+  line-height: calc(60px + (80 - 60) * ((100vw - 1199px) / (1920 - 1199)));
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: -0.84px;
+  text-transform: lowercase;
+  font-family: $font-family_unbounded;
+  max-width: 50%;
+}
