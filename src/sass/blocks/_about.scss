@@ -230,3 +230,30 @@
     margin-bottom: 20px;
   }
 }
+
+.seo_text {
+  margin-top: 80px;
+  margin-bottom: 40px !important;
+  .team_body__inner_text_p {
+    max-width: 980px;
+  }
+  &__frame {
+    &:last-child {
+      .team_body__inner_text_p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1899px) {
+  .seo_text {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+      &__frame {
+        width: 45%;
+        margin-right: 60px;
+      }
+  }
+}
