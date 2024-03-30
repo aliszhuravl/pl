@@ -10,3 +10,4 @@
 //= parts/_slick.js
 //= parts/_follow.js
 //= parts/_panel.js
+//= parts/_popup.js

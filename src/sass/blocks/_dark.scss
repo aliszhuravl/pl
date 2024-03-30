@@ -40,6 +40,7 @@
   color: $color-black;
   .page-container {
     background-color: #fafafa;
+    background-image: none;
     position: relative;
     &:after {
       content: '';
@@ -236,6 +237,19 @@
     .case_body__slider {
       margin-bottom: 20px;
     }
+  }
+
+  .popup {
+    background-color: #fafafa;
+    background-image: none;
+      .close {
+        span {
+          background-color: $color-black;
+            &:after {
+              background-color: $color-black;
+            }
+        }
+      }
   }
 
 }

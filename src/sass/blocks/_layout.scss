@@ -341,6 +341,14 @@
 
 @media (max-width: 1199px) {
 
+  video.aurora, .aurora_light {
+    display: none;
+  }
+
+  .popup {
+    width: 90%;
+  }
+
   .question {
     margin-bottom: 12px;
   }
@@ -1297,6 +1305,10 @@
 
 
 @media (max-width: 640px) {
+
+  .popup {
+    padding: 40px 20px;
+  }
 
   .seo_text {
     margin-top: 60px;

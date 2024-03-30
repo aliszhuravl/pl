@@ -1,47 +1,8 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    //= html/_head.html
-    <title>Контакты</title>
-</head>
-<body>
-<div class="page-container page-subpage">
-    //= html/_header.html
-    //= html/_menu.html
-    <main class="page">
-        <video autoplay muted loop id="myVideo" class="aurora">
-            <source src="img/aurora.mp4" type="video/mp4">
-        </video>
-        <video autoplay muted loop  class="aurora_light">
-            <source src="img/aurora_2.mp4" type="video/mp4">
-        </video>
-        <div class="page__inner">
-            <section class="page__item hero_block hero_contacts">
-                <div class="hero_block__container centered_ttl">
-                    <h1 class="maxi_h2">поговорим о вас, вашей компании, вашей продукции и ваших целях</h1>
-                </div>
-            </section>
-            <section class="page__item q_office">
-                <p class="question">Почему у нас нет офиса?</p>
-                <a href="about.html#office" class="btn">Узнать правду</a>
-            </section>
-            <section class="page__item cb">
-                <div class="contacts_box">
-                    <div class="contacts_box__item">
-                        <a href="https://t.me/Alis_Sergeevich" class="link" target="_blank">{ телеграм }</a>
-                    </div>
-                    <div class="contacts_box__item">
-                        <a href="https://vk.com/purologico" class="link" target="_blank">{ группа вк }</a>
-                    </div>
-                    <div class="contacts_box__item">
-                        <a href="https://www.behance.net/aliszhurav8202" class="link" target="_blank">{ behance }</a>
-                    </div>
-                    <div class="contacts_box__item">
-                        <a href="https://dribbble.com/aliszhuravl" class="link" target="_blank">{ dribbble }</a>
-                    </div>
-                </div>
-            </section>
-            <section class="page__item gb_animate form__outter">
+<div class="popup_wrapper">
+    <div class="popup" id="modal">
+        <div class="close"><span></span></div>
+        <div class="popup_body">
+            <div class="popup_body__inner">
                 <div class="form">
                     <div class="form_left">
                         <p>Вы можете оставить заявку на проект здесь, мы увидим её в нашем телеграме.</p>
@@ -62,15 +23,16 @@
                                         <span class="form__checkbox_text">Лендинг</span>
                                     </label>
                                     <label class="inline-label form__checkbox check">
-                                        <input class="form__checkbox_hidden" type="checkbox" name="checkbox-3">
-                                        <span class="form__checkbox_indicator"></span>
-                                        <span class="form__checkbox_text">Интернет-магазин</span>
-                                    </label>
-                                    <label class="inline-label form__checkbox check">
                                         <input class="form__checkbox_hidden" type="checkbox" name="checkbox-4">
                                         <span class="form__checkbox_indicator"></span>
                                         <span class="form__checkbox_text">Промо-сайт</span>
                                     </label>
+                                    <label class="inline-label form__checkbox check">
+                                        <input class="form__checkbox_hidden" type="checkbox" name="checkbox-3">
+                                        <span class="form__checkbox_indicator"></span>
+                                        <span class="form__checkbox_text">Интернет-магазин</span>
+                                    </label>
+
                                     <label class="inline-label form__checkbox check">
                                         <input class="form__checkbox_hidden" type="checkbox" name="checkbox-4">
                                         <span class="form__checkbox_indicator"></span>
@@ -97,25 +59,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
-
-            //= html/_switcher.html
-
-        </div>
-        <div class="contacts_map map gb_animate">
-            <div class="map_box" id="map"></div>
-            <div class="page__item">
-                <div class="map_window">
-                    <div class="office"><img src="img/office.png" alt=""></div>
-                    <p>Мы -- современная команда, и нам вообще не нужен ваш сраный офис</p>
-                </div>
             </div>
         </div>
-    </main>
-    //= html/_footer.html
-    //= html/_panel.html
-    //= html/_popup.html
+    </div>
 </div>
-//= html/_scripts.html
-</body>
-</html>
