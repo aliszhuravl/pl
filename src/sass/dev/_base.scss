@@ -36,6 +36,7 @@ a {
 }
 
 .light_theme {
+
   a {
     color: $color-black;
     &:hover {
@@ -45,21 +46,20 @@ a {
 }
 
 h1 {
+  font-family: $font-family_unbounded;
   margin-bottom: 30px;
   margin-top: 0;
-  font-size: calc(64px + (108 - 64) * ((100vw - 1199px) / (1920 - 1199)));
-  text-transform: uppercase;
-  font-family: $font-family_deco_bold;
-  font-weight: normal;
+  font-size: calc(64px + (72 - 64) * ((100vw - 1199px) / (1920 - 1199)));
+  font-weight: 300;
 }
 
 h2 {
-  font-family: $font-family_deco_bold;
-  max-width: 50%;
+  font-family: $font-family_unbounded;
+  max-width: 40%;
+  font-weight: 300;
   letter-spacing: -0.02em;
-  font-size: calc(24px + (84 - 24) * ((100vw - 375px) / (1920 - 375)));
+  font-size: calc(24px + (64 - 24) * ((100vw - 375px) / (1920 - 375)));
   margin: 0;
-  font-weight: normal;
 }
 
 h3 {
